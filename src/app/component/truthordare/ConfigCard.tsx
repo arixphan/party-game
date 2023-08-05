@@ -1,14 +1,13 @@
 "use client";
-import { AppRoute } from "@/app/constants/route";
+import { AppRoute } from "@/constants/route";
 import { useRouter } from "next/navigation";
 import { Divider } from "../divider/Divider";
-import { MouseEvent, MouseEventHandler, useContext } from "react";
+import { useContext } from "react";
 import { AppAuthContext } from "../firebase/AuthContext";
 import { Loading } from "../progress/Loading";
-import { MAX_CUSTOM_SUITE } from "@/app/constants/truthordare";
-import { useFirestoreCollection } from "@/app/hooks/useFirestoreCollection";
-import { useAddDoc } from "@/app/hooks/useAddDoc";
-import { EditIcon } from "../icon/Icon";
+import { MAX_CUSTOM_SUITE } from "@/constants/truthordare";
+import { useCollectionRef } from "@/hooks/useCollectionRef";
+import { useAddDoc } from "@/hooks/useAddDoc";
 
 interface GameCardProps {
   className?: string;
@@ -87,10 +86,7 @@ interface CustomOptionsProps {
 }
 
 const CustomOptions = ({ userId }: CustomOptionsProps) => {
-  const { status, data } = useFirestoreCollection(userId, [
-    "truthordare",
-    "suites",
-  ]);
+  const { status, data } = useCollectionRef(userId, ["truthordare", "suites"]);
 
   const router = useRouter();
 

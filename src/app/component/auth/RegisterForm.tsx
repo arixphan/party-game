@@ -1,15 +1,15 @@
 "use client";
 
-import { joinClasses } from "@/app/utils/css";
+import { joinClasses } from "@/utils/css";
 import { useMemo, useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { AppRoute } from "@/app/constants/route";
+import { AppRoute } from "@/constants/route";
 import { Button } from "../button/Button";
 import { Input, Label } from "../input/Input";
 import { useRouter } from "next/navigation";
-import { validateEmail } from "@/app/utils/validation";
+import { validateEmail } from "@/utils/validation";
 import { ErrorList } from "../error/ErrorList";
-import { FirebaseCode } from "@/app/constants/firebase-code";
+import { FirebaseCode } from "@/constants/firebase-code";
 import { ErrorMessage } from "../error/ErrorMessage";
 
 interface RegisterPageProps {
@@ -152,7 +152,12 @@ export const RegisterForm = ({ className = "" }: RegisterPageProps) => {
             return null;
           })}
       </div>
-      <Button type="button" onClick={handleRegister} disabled={errors.hasError}>
+      <Button
+        className="w-full"
+        type="button"
+        onClick={handleRegister}
+        disabled={errors.hasError}
+      >
         Register
       </Button>
     </form>

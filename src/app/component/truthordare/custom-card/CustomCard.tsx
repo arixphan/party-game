@@ -1,25 +1,25 @@
 "use client";
 
-import { TruthOrDare } from "@/app/types/truthordare";
+import { TruthOrDare } from "@/types/truthordare";
 import { useContext, useEffect, useMemo, useState } from "react";
 import { AppAuthContext } from "../../firebase/AuthContext";
 import { TextArea } from "../../input/TextArea";
 import { Input, Label } from "../../input/Input";
-import { useFirestoreDoc } from "@/app/hooks/useFirestoreDoc";
+import { useDocumentRef } from "@/hooks/useDocumentRef";
 import { useParams } from "next/navigation";
-import { useUpdateDoc, useUpdateDocById } from "@/app/hooks/useUpdateDoc";
-import { useAddDoc } from "@/app/hooks/useAddDoc";
+import { useUpdateDoc, useUpdateDocById } from "@/hooks/useUpdateDoc";
+import { useAddDoc } from "@/hooks/useAddDoc";
 import { Divider } from "../../divider/Divider";
-import { joinClasses } from "@/app/utils/css";
-import { useFirestoreCollection } from "@/app/hooks/useFirestoreCollection";
+import { joinClasses } from "@/utils/css";
+import { useCollectionRef } from "@/hooks/useCollectionRef";
 import { CustomLine } from "./CustomLine";
 import { DocumentData, orderBy } from "firebase/firestore";
-import { useDeleteDocById } from "@/app/hooks/useDeleteDoc";
+import { useDeleteDocById } from "@/hooks/useDeleteDoc";
 import { IconButton } from "../../button/IconButton";
 import { useRouter } from "next/navigation";
-import { AppRoute } from "@/app/constants/route";
+import { AppRoute } from "@/constants/route";
 import { LeftIcon, PlayIcon } from "../../icon/Icon";
-import { MAX_SUITE_QUESTION } from "@/app/constants/truthordare";
+import { MAX_SUITE_QUESTION } from "@/constants/truthordare";
 import { LoadingWrapper } from "../../progress/LoadingWrapper";
 import { ErrorAlert } from "../../alert/ErrorAlert";
 
@@ -58,14 +58,14 @@ export const CustomCard = ({ className }: GameCardProps) => {
     customId,
   ] as const;
 
-  const { status, data } = useFirestoreDoc(...suitePath);
-  const { status: truthStatus, data: truthData } = useFirestoreCollection(
+  const { status, data } = useDocumentRef(...suitePath);
+  const { status: truthStatus, data: truthData } = useCollectionRef(
     user?.uid || "does_not_existed",
     ["truthordare", "suites", customId, "truth"],
     orderBy("createdAt", "desc")
   );
 
-  const { status: dareStatus, data: dareData } = useFirestoreCollection(
+  const { status: dareStatus, data: dareData } = useCollectionRef(
     user?.uid || "does_not_existed",
     ["truthordare", "suites", customId, "dare"],
     orderBy("createdAt", "desc")

@@ -1,4 +1,4 @@
-import { joinClasses } from "@/app/utils/css";
+import { joinClasses } from "@/utils/css";
 import { TextareaHTMLAttributes } from "react";
 
 export interface InputProps

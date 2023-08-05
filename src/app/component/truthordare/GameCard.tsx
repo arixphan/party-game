@@ -1,9 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { IconButton } from "../button/IconButton";
-import { CloseIcon, LeftIcon } from "../icon/Icon";
-import { AppRoute } from "@/app/constants/route";
+import { CloseIcon } from "../icon/Icon";
+import { AppRoute } from "@/constants/route";
 
 interface GameCardProps {
   className?: string;

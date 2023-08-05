@@ -1,12 +1,21 @@
-import { QueryConstraint, collection, query } from "firebase/firestore";
+import {
+  DocumentData,
+  QueryConstraint,
+  collection,
+  query,
+} from "firebase/firestore";
 import { useMemo } from "react";
-import { useFirestore, useFirestoreCollectionData } from "reactfire";
+import {
+  ObservableStatus,
+  useFirestore,
+  useFirestoreCollectionData,
+} from "reactfire";
 
-export const useFirestoreCollection = (
+export const useCollectionRef = (
   path: string,
   pathSegments: string[],
   ...queryConstraints: QueryConstraint[]
-) => {
+): ObservableStatus<DocumentData[]> => {
   const firestore = useFirestore();
   const collectionRef = collection(firestore, path, ...pathSegments);
   const collectionQuery = query(collectionRef, ...queryConstraints);

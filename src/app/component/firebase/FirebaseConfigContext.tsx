@@ -74,7 +74,7 @@ export function AuthContext({ children }: React.PropsWithChildren) {
 
   return (
     <AppAuthContext.Provider value={{ user, setUser }}>
-      <AuthProvider sdk={auth}>{children}</AuthProvider>;
+      <AuthProvider sdk={auth}>{children}</AuthProvider>
     </AppAuthContext.Provider>
   );
 }

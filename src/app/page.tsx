@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AppRoute } from "./constants/route";
+import { AppRoute } from "../constants/route";
 
 export default function Home() {
   return (

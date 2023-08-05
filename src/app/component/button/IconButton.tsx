@@ -1,4 +1,4 @@
-import { joinClasses } from "@/app/utils/css";
+import { joinClasses } from "@/utils/css";
 import { HTMLAttributes } from "react";
 
 interface IconButtonProps extends HTMLAttributes<HTMLButtonElement> {

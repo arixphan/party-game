@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { Input, Label } from "../input/Input";
-import { AppRoute } from "@/app/constants/route";
+import { AppRoute } from "@/constants/route";
 import { Button } from "../button/Button";
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { validateEmail } from "@/app/utils/validation";
+import { validateEmail } from "@/utils/validation";
 import {
   browserLocalPersistence,
   getAuth,
@@ -14,7 +14,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { FirebaseCode } from "@/app/constants/firebase-code";
+import { FirebaseCode } from "@/constants/firebase-code";
 import { ErrorMessage } from "../error/ErrorMessage";
 
 export const SignInForm = () => {
@@ -124,10 +124,13 @@ export const SignInForm = () => {
         </div>
 
         <div className="mb-3">
-          <Button className="mb-1.5" type="button" onClick={handleLogin}>
+          <Button className="mb-1.5 w-full" type="button" onClick={handleLogin}>
             Sign in
           </Button>
-          <Button variant="secondary" className="flex flex-wrap justify-center">
+          <Button
+            variant="secondary"
+            className="flex flex-wrap justify-center w-full"
+          >
             <Image
               alt="Google Icon"
               width={20}

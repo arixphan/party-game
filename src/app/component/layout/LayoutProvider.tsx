@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import PageHeader from "./Header";
-import { AppRoute } from "@/app/constants/route";
+import { AppRoute } from "@/constants/route";
 import React from "react";
 
 export const LayoutProvider = () => {

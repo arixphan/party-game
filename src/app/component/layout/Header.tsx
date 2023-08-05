@@ -1,6 +1,6 @@
 import { UserIcon } from "./UserIcon";
 import Link from "next/link";
-import { AppRoute } from "@/app/constants/route";
+import { AppRoute } from "@/constants/route";
 
 interface PageHeaderProps extends React.PropsWithChildren {}
 

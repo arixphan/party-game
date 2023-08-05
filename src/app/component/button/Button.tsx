@@ -1,4 +1,4 @@
-import { joinClasses } from "@/app/utils/css";
+import { joinClasses } from "@/utils/css";
 import { ButtonHTMLAttributes } from "react";
 
 export type ButtonType = "primary" | "secondary";
@@ -19,7 +19,7 @@ export const Button = (props: ButtonProps) => {
     <button
       {...props}
       className={joinClasses(
-        "w-full text-sm font-bold py-2 px-4 rounded-md transition duration-300",
+        "text-sm font-bold py-2 px-4 rounded-md transition duration-300",
         className,
         {
           "bg-gray-400": Boolean(disabled),
