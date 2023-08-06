@@ -8,13 +8,14 @@ import { Loading } from "../progress/Loading";
 import { MAX_CUSTOM_SUITE } from "@/constants/truthordare";
 import { useCollectionRef } from "@/hooks/useCollectionRef";
 import { useAddDoc } from "@/hooks/useAddDoc";
+import Image from "next/image";
 
 interface GameCardProps {
   className?: string;
 }
 
 enum GameType {
-  normal = "normal",
+  common = "common",
   adult = "adult",
   couple = "couple",
   custom = "custom",
@@ -22,19 +23,44 @@ enum GameType {
 
 const OPTIONS = [
   {
-    label: "Normal",
-    value: GameType.normal,
-    className: "bg-gradient-to-r from-slate-500 to-slate-400",
+    label: (
+      <div className="w-1/3 flex gap-2">
+        <Image
+          alt={"common"}
+          src={"/icon/gamepad.svg"}
+          width={24}
+          height={24}
+        />
+        Common
+      </div>
+    ),
+    value: GameType.common,
+    className: "border-slate-500",
   },
   {
-    label: "Adult",
+    label: (
+      <div className="w-1/3 flex gap-2">
+        <Image
+          alt={"adult"}
+          src={"/icon/adult-18.svg"}
+          width={24}
+          height={24}
+        />
+        Adult
+      </div>
+    ),
     value: GameType.adult,
-    className: " bg-gradient-to-r from-red-500 to-orange-500 ",
+    className: "border-red-500 ",
   },
   {
-    label: "Couple",
+    label: (
+      <div className="w-1/3 flex gap-2">
+        <Image alt={"couple"} src={"/icon/heart.svg"} width={24} height={24} />
+        Couple
+      </div>
+    ),
     value: GameType.couple,
-    className: "bg-gradient-to-r from-pink-500 to-rose-400",
+    className: "border-pink-500",
   },
 ];
 
@@ -43,7 +69,7 @@ export const ConfigCard = ({ className }: GameCardProps) => {
   const { user } = useContext(AppAuthContext);
 
   const handleOnClick = (value: string) => {
-    router.push(AppRoute.TRUTH_OR_DARE.PLAY);
+    router.push(`${AppRoute.TRUTH_OR_DARE.PLAY}/${value}`);
   };
   return (
     <div
@@ -120,7 +146,7 @@ const CustomOptions = ({ userId }: CustomOptionsProps) => {
       {data.map((item) => (
         <ConfigOption
           key={item.id}
-          text={item.title}
+          text={<p className="line-clamp-1">{item.title}</p>}
           value={item.id}
           onClick={() => handleOnClick(item.id)}
         />
@@ -128,7 +154,7 @@ const CustomOptions = ({ userId }: CustomOptionsProps) => {
       {data.length < MAX_CUSTOM_SUITE && (
         <ConfigOption
           text={`Create New (${data.length}/${MAX_CUSTOM_SUITE})`}
-          className="text-black"
+          className="text-black border-2 border-gray-300 rounded-full"
           value="create"
           onClick={handleCreateNew}
         />
@@ -153,16 +179,19 @@ const ConfigOption = ({
   return (
     <button
       className={`
-       group h-12 px-6 border-2
-       border-gray-300 
-       rounded-full
-       transition ease-in-out delay-150 hover:-translate-y-1
-        hover:scale-105 duration-300
-      hover:border-blue-400 select-none ${className}`}
+      group h-12 px-6 select-none
+      transition ease-in-out delay-150 
+      hover:-translate-y-1
+      hover:scale-105 duration-300
+      hover:border-blue-400 ${className}`}
       onClick={() => onClick(value)}
     >
-      <div className="text-center font-semibold tracking-wide text-lg transition duration-300 group-hover:text-blue-600">
-        <p className="line-clamp-1">{text}</p>
+      <div
+        className="font-semibold flex justify-center
+      tracking-wide text-lg transition 
+      duration-300 group-hover:text-blue-600"
+      >
+        {text}
       </div>
     </button>
   );

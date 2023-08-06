@@ -12,4 +12,10 @@
 
 body {
   background-color: #120226;
+  /* background-image: linear-gradient(
+    to top,
+    #ff9a9e 0%,
+    #fecfef 99%,
+    #fecfef 100%
+  ); */
 }

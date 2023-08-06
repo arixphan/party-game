@@ -10,7 +10,7 @@ import { useDocumentRef } from "@/hooks/useDocumentRef";
 import { limit, orderBy, startAfter } from "firebase/firestore";
 import { Button } from "@/app/component/button/Button";
 
-const PAGE_SIZE = 1;
+const PAGE_SIZE = 20;
 
 export default function TruthOrDareManagementPage() {
   const [type, setType] = useState(TruthOrDare.Type.truth);

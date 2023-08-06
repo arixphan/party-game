@@ -36,7 +36,7 @@ const GAME_TYPE = [
   },
 ];
 
-export const REQUIRE_QUESTION_ERROR = `Let's come up with lots of fun truth or dare challenges to enjoy together!😄`;
+export const REQUIRE_QUESTION_ERROR = `Let's come up with lots of fun truth and dare challenges to enjoy together!😄`;
 
 interface GameCardProps {
   className?: string;
@@ -194,14 +194,14 @@ export const CustomCard = ({ className }: GameCardProps) => {
 
   const router = useRouter();
   const isDisable = questionList.length >= MAX_SUITE_QUESTION;
-  const allowPlay = truthData?.length > 0 || dareData?.length > 0;
+  const allowPlay = truthData?.length > 0 && dareData?.length > 0;
 
   const handlePlay = () => {
     if (!allowPlay) {
       setErrorMessage(REQUIRE_QUESTION_ERROR);
       return;
     }
-    router.push(AppRoute.TRUTH_OR_DARE.PLAY);
+    router.push(`${AppRoute.TRUTH_OR_DARE.PLAY}/${customId}`);
   };
 
   return (

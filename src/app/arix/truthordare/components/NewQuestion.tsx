@@ -48,6 +48,7 @@ export const NewQuestion = ({ type, kind }: NewQuestionProps) => {
         batch.set(newRef, {
           content: question,
           order: incrementCounter,
+          id: String(incrementCounter),
           createdAt: new Date(),
         });
       }
