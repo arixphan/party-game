@@ -27,7 +27,7 @@ export const Label = (props: LabelProps) => {
     <label
       {...props}
       className={joinClasses(
-        "block text-gray-700  font-bold mb-2",
+        "block font-bold mb-2",
         props.className || "text-sm"
       )}
     >

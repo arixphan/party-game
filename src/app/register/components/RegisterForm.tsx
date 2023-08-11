@@ -1,16 +1,17 @@
 "use client";
 
-import { joinClasses } from "@/utils/css";
 import { useMemo, useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { AppRoute } from "@/constants/route";
-import { Button } from "../button/Button";
-import { Input, Label } from "../input/Input";
 import { useRouter } from "next/navigation";
-import { validateEmail } from "@/utils/validation";
-import { ErrorList } from "../error/ErrorList";
+
+import { Button } from "@/app/shares/button/Button";
+import { ErrorList } from "@/app/shares/error/ErrorList";
+import { ErrorMessage } from "@/app/shares/error/ErrorMessage";
+import { Input, Label } from "@/app/shares/input/Input";
 import { FirebaseCode } from "@/constants/firebase-code";
-import { ErrorMessage } from "../error/ErrorMessage";
+import { AppRoute } from "@/constants/route";
+import { joinClasses } from "@/utils/css";
+import { validateEmail } from "@/utils/validation";
 
 interface RegisterPageProps {
   className?: string;

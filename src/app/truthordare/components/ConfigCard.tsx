@@ -1,14 +1,17 @@
 "use client";
-import { AppRoute } from "@/constants/route";
-import { useRouter } from "next/navigation";
-import { Divider } from "../divider/Divider";
-import { useContext } from "react";
-import { AppAuthContext } from "../firebase/AuthContext";
-import { Loading } from "../progress/Loading";
-import { MAX_CUSTOM_SUITE } from "@/constants/truthordare";
-import { useCollectionRef } from "@/hooks/useCollectionRef";
-import { useAddDoc } from "@/hooks/useAddDoc";
+import { memo } from "react";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useUser } from "reactfire";
+
+import { Divider } from "@/app/shares/divider/Divider";
+import { Loading } from "@/app/shares/progress/Loading";
+import { AppRoute } from "@/constants/route";
+
+import { MAX_CUSTOM_SUITE } from "@/constants/truthordare";
+
+import { useAddDoc, useCollectionRef } from "@/hooks/firebase";
 
 interface GameCardProps {
   className?: string;
@@ -24,7 +27,7 @@ enum GameType {
 const OPTIONS = [
   {
     label: (
-      <div className="w-1/3 flex gap-2">
+      <div className="w-24 flex gap-2">
         <Image
           alt={"common"}
           src={"/icon/gamepad.svg"}
@@ -39,7 +42,7 @@ const OPTIONS = [
   },
   {
     label: (
-      <div className="w-1/3 flex gap-2">
+      <div className="w-24 flex gap-2">
         <Image
           alt={"adult"}
           src={"/icon/adult-18.svg"}
@@ -54,7 +57,7 @@ const OPTIONS = [
   },
   {
     label: (
-      <div className="w-1/3 flex gap-2">
+      <div className="w-24 flex gap-2">
         <Image alt={"couple"} src={"/icon/heart.svg"} width={24} height={24} />
         Couple
       </div>
@@ -66,7 +69,7 @@ const OPTIONS = [
 
 export const ConfigCard = ({ className }: GameCardProps) => {
   const router = useRouter();
-  const { user } = useContext(AppAuthContext);
+  const { data: user } = useUser();
 
   const handleOnClick = (value: string) => {
     router.push(`${AppRoute.TRUTH_OR_DARE.PLAY}/${value}`);
@@ -85,7 +88,7 @@ export const ConfigCard = ({ className }: GameCardProps) => {
         />
       ))}
       <Divider>Your Game</Divider>
-      {!user ? <LoginOption /> : <CustomOptions userId={user?.uid} />}
+      {!user?.uid ? <LoginOption /> : <CustomOptions userId={user.uid} />}
     </div>
   );
 };
@@ -111,10 +114,14 @@ interface CustomOptionsProps {
   userId: string;
 }
 
-const CustomOptions = ({ userId }: CustomOptionsProps) => {
-  const { status, data } = useCollectionRef(userId, ["truthordare", "suites"]);
-
+const CustomOptions = memo(function CustomOptions({
+  userId,
+}: CustomOptionsProps) {
   const router = useRouter();
+
+  const res = useCollectionRef(userId, ["truthordare", "suites"]);
+
+  const { status, data } = res;
 
   const addDoc = useAddDoc(userId, "truthordare", "suites");
 
@@ -161,7 +168,7 @@ const CustomOptions = ({ userId }: CustomOptionsProps) => {
       )}
     </>
   );
-};
+});
 
 interface ConfigOptionProps {
   className?: string;
@@ -170,12 +177,12 @@ interface ConfigOptionProps {
   onClick: (value: string) => void;
 }
 
-const ConfigOption = ({
+const ConfigOption = memo(function ConfigOption({
   className = "",
   text = "",
   onClick,
   value,
-}: ConfigOptionProps) => {
+}: ConfigOptionProps) {
   return (
     <button
       className={`
@@ -195,4 +202,4 @@ const ConfigOption = ({
       </div>
     </button>
   );
-};
+});

@@ -1,5 +1,6 @@
-import { ConfigCard } from "../component/truthordare/ConfigCard";
 import { Calistoga } from "next/font/google";
+
+import { ConfigCard } from "./components/ConfigCard";
 
 const dancingScript = Calistoga({
   subsets: ["latin"],

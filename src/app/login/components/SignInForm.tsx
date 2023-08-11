@@ -1,23 +1,26 @@
 "use client";
 
-import Link from "next/link";
-import { Input, Label } from "../input/Input";
-import { AppRoute } from "@/constants/route";
-import { Button } from "../button/Button";
-import Image from "next/image";
 import { useMemo, useState } from "react";
-import { validateEmail } from "@/utils/validation";
 import {
   browserLocalPersistence,
   getAuth,
   setPersistence,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { FirebaseCode } from "@/constants/firebase-code";
-import { ErrorMessage } from "../error/ErrorMessage";
 
-export const SignInForm = () => {
+import { Button } from "@/app/shares/button/Button";
+import { ErrorMessage } from "@/app/shares/error/ErrorMessage";
+import { Input, Label } from "@/app/shares/input/Input";
+import { FirebaseCode } from "@/constants/firebase-code";
+
+import { AppRoute } from "@/constants/route";
+import { joinClasses } from "@/utils/css";
+import { validateEmail } from "@/utils/validation";
+
+export const SignInForm = ({ className = "" }: { className?: string }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [responseError, setResponseError] = useState("");
@@ -62,7 +65,7 @@ export const SignInForm = () => {
         .then((userCredential) => {
           const user = userCredential.user;
           if (user) {
-            router.push(AppRoute.ROOT);
+            router.push(AppRoute.ROOT, { shadow: false });
           }
         })
         .catch((error) => {
@@ -73,10 +76,15 @@ export const SignInForm = () => {
   };
 
   return (
-    <div className="w-full p-6">
+    <form
+      className={joinClasses(
+        "w-full max-w-sm mx-auto bg-white p-8 rounded-tr-3xl rounded-bl-3xl shadow-md",
+        className
+      )}
+    >
       <h1 className="text-xl font-semibold">Welcome</h1>
       <small className="text-gray-400">Please enter your details</small>
-      <form className="mt-4">
+      <div className="mt-4">
         <div className="mb-3">
           <Label className="mb-2">Email</Label>
           <Input
@@ -141,7 +149,7 @@ export const SignInForm = () => {
             Sign in with Google
           </Button>
         </div>
-      </form>
+      </div>
 
       <div className="text-center">
         <span className="text-xs text-gray-400 font-semibold">
@@ -154,6 +162,6 @@ export const SignInForm = () => {
           Sign up
         </Link>
       </div>
-    </div>
+    </form>
   );
 };

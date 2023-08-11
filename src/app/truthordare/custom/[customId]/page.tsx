@@ -1,5 +1,6 @@
-import { CustomCard } from "@/app/component/truthordare/custom-card/CustomCard";
 import { Calistoga } from "next/font/google";
+
+import { CustomCard } from "./components/CustomCard";
 
 const dancingScript = Calistoga({
   subsets: ["latin"],

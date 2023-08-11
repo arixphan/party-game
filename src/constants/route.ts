@@ -10,3 +10,8 @@ export namespace AppRoute {
     REGISTER: "/register",
   };
 }
+
+export const AuthRoutes = [
+  AppRoute.TRUTH_OR_DARE.CUSTOM,
+  AppRoute.TRUTH_OR_DARE.PLAY,
+];

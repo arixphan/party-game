@@ -7,7 +7,6 @@ import React from "react";
 
 export const LayoutProvider = () => {
   const pathname = usePathname();
-  if (pathname === AppRoute.AUTH.LOGIN) return null;
 
   const headerSlot = getHeaderSlot(pathname);
 

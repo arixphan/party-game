@@ -1,12 +1,7 @@
 "use client";
 
-import {
-  getAuth,
-  connectAuthEmulator,
-  Auth,
-  onAuthStateChanged,
-  User,
-} from "firebase/auth";
+import { useEffect, useState } from "react";
+import { getAuth, connectAuthEmulator, Auth, User } from "firebase/auth";
 import { connectFirestoreEmulator, getFirestore } from "firebase/firestore";
 import {
   AuthProvider,
@@ -14,18 +9,8 @@ import {
   FirestoreProvider,
   useFirebaseApp,
 } from "reactfire";
-import { AppAuthContext } from "./AuthContext";
-import { useState } from "react";
 
-let firebaseConfig = {
-  apiKey: "AIzaSyDWUrY1_dvBYW6HqUc9QncX11WwXvzDbIo",
-  authDomain: "party-game-34121.firebaseapp.com",
-  projectId: "party-game-34121",
-  storageBucket: "party-game-34121.appspot.com",
-  messagingSenderId: "380048439162",
-  appId: "1:380048439162:web:516482698fb540b40808c3",
-  measurementId: "G-7CVSE9EHVB",
-};
+import { firebaseConfig } from "@/config/firebase";
 
 export const FirebaseConfigContext = ({
   children,
@@ -62,19 +47,14 @@ async function setupEmulators(auth: Auth) {
 }
 
 export function AuthContext({ children }: React.PropsWithChildren) {
-  const auth = getAuth(useFirebaseApp());
   const [user, setUser] = useState<User | null>(null);
-  if (process.env.NODE_ENV === "development") {
-    setupEmulators(auth);
-  }
+  const auth = getAuth(useFirebaseApp());
 
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
+  useEffect(() => {
+    if (process.env.NODE_ENV === "development") {
+      setupEmulators(auth);
+    }
+  }, []);
 
-  return (
-    <AppAuthContext.Provider value={{ user, setUser }}>
-      <AuthProvider sdk={auth}>{children}</AuthProvider>
-    </AppAuthContext.Provider>
-  );
+  return <AuthProvider sdk={auth}>{children}</AuthProvider>;
 }

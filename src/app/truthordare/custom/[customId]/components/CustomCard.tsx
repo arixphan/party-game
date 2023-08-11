@@ -1,27 +1,32 @@
 "use client";
 
-import { TruthOrDare } from "@/types/truthordare";
-import { useContext, useEffect, useMemo, useState } from "react";
-import { AppAuthContext } from "../../firebase/AuthContext";
-import { TextArea } from "../../input/TextArea";
-import { Input, Label } from "../../input/Input";
-import { useDocumentRef } from "@/hooks/useDocumentRef";
-import { useParams } from "next/navigation";
-import { useUpdateDoc, useUpdateDocById } from "@/hooks/useUpdateDoc";
-import { useAddDoc } from "@/hooks/useAddDoc";
-import { Divider } from "../../divider/Divider";
-import { joinClasses } from "@/utils/css";
-import { useCollectionRef } from "@/hooks/useCollectionRef";
-import { CustomLine } from "./CustomLine";
+import { useEffect, useMemo, useState } from "react";
 import { DocumentData, orderBy } from "firebase/firestore";
-import { useDeleteDocById } from "@/hooks/useDeleteDoc";
-import { IconButton } from "../../button/IconButton";
+import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { useUser } from "reactfire";
+
+import { ErrorAlert } from "@/app/shares/alert/ErrorAlert";
+import { BackIcon, CirclePlus, StartIcon } from "@/app/shares/icon/Icon";
+import { Input, Label } from "@/app/shares/input/Input";
+import { TextArea } from "@/app/shares/input/TextArea";
+import { LoadingWrapper } from "@/app/shares/progress/LoadingWrapper";
 import { AppRoute } from "@/constants/route";
-import { LeftIcon, PlayIcon } from "../../icon/Icon";
 import { MAX_SUITE_QUESTION } from "@/constants/truthordare";
-import { LoadingWrapper } from "../../progress/LoadingWrapper";
-import { ErrorAlert } from "../../alert/ErrorAlert";
+import {
+  useUpdateDoc,
+  useUpdateDocById,
+  useDeleteDocById,
+  useDocumentRef,
+} from "@/hooks/firebase";
+import { useAddDoc } from "@/hooks/firebase/useAddDoc";
+
+import { useCollectionRef } from "@/hooks/firebase/useCollectionRef";
+
+import { TruthOrDare } from "@/types/truthordare";
+import { joinClasses } from "@/utils/css";
+
+import { CustomLine } from "./CustomLine";
 
 const GAME_TYPE = [
   {
@@ -48,7 +53,7 @@ export const CustomCard = ({ className }: GameCardProps) => {
   const [title, setTitle] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const { user } = useContext(AppAuthContext);
+  const { data: user } = useUser();
   const { customId } = useParams();
 
   const suitePath = [
@@ -209,11 +214,11 @@ export const CustomCard = ({ className }: GameCardProps) => {
       className={`bg-white drop-shadow-2xl rounded-xl border-4 border-black p-6 flex flex-col gap-y-4 ${className}`}
     >
       <div className="flex justify-between">
-        <IconButton
-          icon={<LeftIcon></LeftIcon>}
+        <BackIcon
+          className="w-10 h-10 cursor-pointer "
           onClick={() => router.push(AppRoute.TRUTH_OR_DARE.INDEX)}
         />
-        <IconButton icon={<PlayIcon></PlayIcon>} onClick={handlePlay} />
+        <StartIcon className="w-12 h-12 cursor-pointer" onClick={handlePlay} />
       </div>
       {errorMessage && (
         <ErrorAlert
@@ -225,17 +230,16 @@ export const CustomCard = ({ className }: GameCardProps) => {
       <LoadingWrapper loading={status === "loading"}>
         <div className="flex items-center flex-col">
           <div className="w-full">
-            <Label className="text-2xl">Title</Label>
             <Input
               value={title}
+              placeholder="Title..."
               onChange={(e) => setTitle(e.target.value)}
               onBlur={(e) => handleUpdateTitle(e.target.value)}
-              className="w-full outline outline-2 outline-gray-500 select-none focus:ring-2"
+              className="w-full outline outline-2 outline-zinc-200 select-none focus:ring-2"
               maxLength={50}
             />
           </div>
-          <Divider size={8} className="mt-4"></Divider>
-          <div className="mt-2 md:w-64 w-full">
+          <div className="mt-4 md:w-64 w-full">
             {GAME_TYPE.map((item) => {
               return (
                 <button
@@ -266,34 +270,36 @@ export const CustomCard = ({ className }: GameCardProps) => {
               );
             })}
           </div>
-          <div className="w-full mt-4">
-            <Label className="text-2xl">New Question</Label>
-            <TextArea
-              value={question}
-              onChange={(e) => setQuestion(e.target.value)}
-              maxLength={250}
-              rows={4}
-              disabled={isDisable}
-              className="w-full outline outline-2 outline-gray-500 select-none focus:ring-2"
-            />
-            <button
-              className={joinClasses(
-                `w-full rounded-xl border-0 px-5 py-3 mb-3 text-white font-extrabold text-2xl transition duration-200 `,
-                isDisable
-                  ? "bg-gray-400"
-                  : "bg-indigo-700 hover:text-indigo-500 border-indigo-500 hover:bg-white  hover:border-4"
-              )}
-              onClick={handleCreateQuestion}
-              disabled={isDisable}
-            >
-              Create
-            </button>
-          </div>
-          <div className="w-full flex flex-col gap-2 mt-4">
-            <Label className="text-lg text-right">
-              {questionList.length}/{MAX_SUITE_QUESTION}
-            </Label>
 
+          <div className="w-full flex flex-col gap-2 mt-2">
+            <Label className="text-lg text-black text-end">
+              ({questionList.length}/{MAX_SUITE_QUESTION})
+            </Label>
+            <div className="w-full bg-zinc-50 rounded-lg flex justify-between">
+              <TextArea
+                value={question}
+                onChange={(e) => setQuestion(e.target.value)}
+                maxLength={250}
+                rows={4}
+                disabled={isDisable}
+                placeholder="New..."
+                className="w-full border-2 border-r-0 rounded-e-none
+                  border-zinc-200 min-h-[96px] 
+                   outline-none select-none focus:ring-2"
+              />
+              <div className="w-12">
+                <div
+                  className={joinClasses(
+                    `flex-1 h-full w-full cursor-pointer text-center 
+                    p-2 flex items-center rounded-e-md `,
+                    isDisable ? "bg-gray-300" : "bg-indigo-700"
+                  )}
+                  onClick={handleCreateQuestion}
+                >
+                  <CirclePlus />
+                </div>
+              </div>
+            </div>
             {questionList.map((item) => (
               <CustomLine
                 key={item.id}

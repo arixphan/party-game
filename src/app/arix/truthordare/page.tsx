@@ -1,14 +1,16 @@
 "use client";
 
-import { SwitchButton } from "./components/SwitchButton";
-import { NewQuestion } from "./components/NewQuestion";
-import { Fragment, useEffect, useState } from "react";
-import { TruthOrDare } from "@/types/truthordare";
-import { useSearchParams } from "next/navigation";
-import { useCollectionRef } from "@/hooks/useCollectionRef";
-import { useDocumentRef } from "@/hooks/useDocumentRef";
+import { useEffect, useState } from "react";
 import { limit, orderBy, startAfter } from "firebase/firestore";
-import { Button } from "@/app/component/button/Button";
+import { useSearchParams } from "next/navigation";
+
+import { Button } from "@/app/shares/button/Button";
+import { useCollectionRef } from "@/hooks/firebase/useCollectionRef";
+import { useDocumentRef } from "@/hooks/firebase/useDocumentRef";
+import { TruthOrDare } from "@/types/truthordare";
+
+import { NewQuestion } from "./components/NewQuestion";
+import { SwitchButton } from "./components/SwitchButton";
 
 const PAGE_SIZE = 20;
 

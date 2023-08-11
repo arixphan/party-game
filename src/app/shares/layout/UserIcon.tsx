@@ -1,11 +1,10 @@
 "use client";
 
-import { useContext } from "react";
-import { AppAuthContext } from "../firebase/AuthContext";
+import { useSigninCheck } from "reactfire";
 
 export const UserIcon = () => {
-  const { user } = useContext(AppAuthContext);
-  if (!user) return null;
+  const { data: user } = useSigninCheck();
+  if (!user.signedIn) return null;
   return (
     <svg
       className="w-6 h-6 text-white"

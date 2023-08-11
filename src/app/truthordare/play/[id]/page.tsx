@@ -1,5 +1,6 @@
-import { GameCard } from "@/app/component/truthordare/GameCard";
 import { Calistoga } from "next/font/google";
+
+import { GameCard } from "./components/GameCard";
 
 const dancingScript = Calistoga({
   subsets: ["latin"],

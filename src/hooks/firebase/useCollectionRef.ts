@@ -1,10 +1,10 @@
+import { useMemo } from "react";
 import {
   DocumentData,
   QueryConstraint,
   collection,
   query,
 } from "firebase/firestore";
-import { useMemo } from "react";
 import {
   ObservableStatus,
   useFirestore,
@@ -18,6 +18,7 @@ export const useCollectionRef = (
 ): ObservableStatus<DocumentData[]> => {
   const firestore = useFirestore();
   const collectionRef = collection(firestore, path, ...pathSegments);
+
   const collectionQuery = query(collectionRef, ...queryConstraints);
 
   const observeResponse = useFirestoreCollectionData(collectionQuery, {

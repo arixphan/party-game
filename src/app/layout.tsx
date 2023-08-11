@@ -1,7 +1,7 @@
-import { FirebaseConfigContext } from "@/app/component/firebase/FirebaseConfigContext";
+import { FirebaseConfigContext } from "./shares/firebase/FirebaseConfigContext";
+import { LayoutProvider } from "./shares/layout/LayoutProvider";
 
 import "./globals.css";
-import { LayoutProvider } from "./component/layout/LayoutProvider";
 
 export const metadata = {
   title: "Create Next App",

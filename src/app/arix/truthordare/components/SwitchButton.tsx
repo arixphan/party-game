@@ -1,7 +1,6 @@
 "use client";
 
 import { TruthOrDare } from "@/types/truthordare";
-import { useState } from "react";
 
 interface SwitchButtonProps {
   value: TruthOrDare.Type;

@@ -1,12 +1,13 @@
 "use client";
-import { Button } from "@/app/component/button/Button";
-import { TextArea } from "@/app/component/input/TextArea";
 import { ChangeEvent, useCallback, useState } from "react";
 import { writeBatch, doc, increment } from "firebase/firestore";
 
 import { useFirestore } from "reactfire";
+
+import { Button } from "@/app/shares/button/Button";
+import { TextArea } from "@/app/shares/input/TextArea";
+import { useDocumentRef } from "@/hooks/firebase/useDocumentRef";
 import { TruthOrDare } from "@/types/truthordare";
-import { useDocumentRef } from "@/hooks/useDocumentRef";
 
 interface NewQuestionProps {
   type: TruthOrDare.Type;
