@@ -7,6 +7,8 @@ import {
   getAuth,
   setPersistence,
   signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
 } from "firebase/auth";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,6 +22,7 @@ import { FirebaseCode } from "@/constants/firebase-code";
 import { AppRoute } from "@/constants/route";
 import { joinClasses } from "@/utils/css";
 import { validateEmail } from "@/utils/validation";
+const provider = new GoogleAuthProvider();
 
 export const SignInForm = ({ className = "" }: { className?: string }) => {
   const [email, setEmail] = useState("");
@@ -43,6 +46,11 @@ export const SignInForm = ({ className = "" }: { className?: string }) => {
         rule: FirebaseCode.WRONG_PASSWORD,
         errorMessage: "Wrong password",
         hasError: responseError === FirebaseCode.WRONG_PASSWORD,
+      },
+      {
+        rule: FirebaseCode.GOOGLE_AUTH_CODE,
+        errorMessage: "Something's wrong!, please try again",
+        hasError: responseError === FirebaseCode.GOOGLE_AUTH_CODE,
       },
       {
         rule: "email",
@@ -78,6 +86,23 @@ export const SignInForm = ({ className = "" }: { className?: string }) => {
         })
         .finally(() => setSubmitting(false));
     });
+  };
+
+  const handleLoginWithGoogle = () => {
+    const auth = getAuth();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        if (user) {
+          router.push(AppRoute.ROOT, { shadow: false });
+        }
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setResponseError(FirebaseCode.GOOGLE_AUTH_CODE);
+      });
   };
 
   return (
@@ -146,8 +171,10 @@ export const SignInForm = ({ className = "" }: { className?: string }) => {
             Sign in
           </Button>
           <Button
+            type="button"
             variant="secondary"
             className="flex flex-wrap justify-center w-full"
+            onClick={handleLoginWithGoogle}
           >
             <Image
               alt="Google Icon"

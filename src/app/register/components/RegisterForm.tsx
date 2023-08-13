@@ -1,7 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
 import { useRouter } from "next/navigation";
 
 import { Button } from "@/app/shares/button/Button";
@@ -12,10 +17,12 @@ import { FirebaseCode } from "@/constants/firebase-code";
 import { AppRoute } from "@/constants/route";
 import { joinClasses } from "@/utils/css";
 import { validateEmail } from "@/utils/validation";
+import Image from "next/image";
 
 interface RegisterPageProps {
   className?: string;
 }
+const provider = new GoogleAuthProvider();
 
 export const RegisterForm = ({ className = "" }: RegisterPageProps) => {
   const [email, setEmail] = useState<string>("");
@@ -34,8 +41,10 @@ export const RegisterForm = ({ className = "" }: RegisterPageProps) => {
     const validationResult = [
       {
         rule: "email",
-        errorMessage: "Invalid email address",
-        successMessage: "Valid email address",
+        errorMessage: !email?.trim()
+          ? "The email address is required"
+          : "The provided email address is invalid.",
+        successMessage: "Email address is acceptable.",
         hasError: hasEmailError,
       },
       {
@@ -67,6 +76,11 @@ export const RegisterForm = ({ className = "" }: RegisterPageProps) => {
         errorMessage: "The email is already in use",
         hasError: responseError === FirebaseCode.EMAIL_ALREADY_IN_USER,
       },
+      {
+        rule: FirebaseCode.GOOGLE_AUTH_CODE,
+        errorMessage: "Something's wrong!, please try again",
+        hasError: responseError === FirebaseCode.GOOGLE_AUTH_CODE,
+      },
     ];
 
     return {
@@ -90,6 +104,23 @@ export const RegisterForm = ({ className = "" }: RegisterPageProps) => {
         setResponseError(error.code);
       })
       .finally(() => setSubmitting(false));
+  };
+
+  const handleLoginWithGoogle = () => {
+    const auth = getAuth();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        if (user) {
+          router.push(AppRoute.ROOT, { shadow: false });
+        }
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setResponseError(FirebaseCode.GOOGLE_AUTH_CODE);
+      });
   };
 
   return (
@@ -160,6 +191,21 @@ export const RegisterForm = ({ className = "" }: RegisterPageProps) => {
         disabled={errors.hasError}
       >
         Register
+      </Button>
+      <Button
+        type="button"
+        variant="secondary"
+        className="mt-2 flex flex-wrap justify-center w-full"
+        onClick={handleLoginWithGoogle}
+      >
+        <Image
+          alt="Google Icon"
+          width={20}
+          height={20}
+          className="mr-2"
+          src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA"
+        />
+        Sign in with Google
       </Button>
     </form>
   );

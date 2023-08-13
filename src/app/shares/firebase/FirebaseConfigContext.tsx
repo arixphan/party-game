@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { getAuth, connectAuthEmulator, Auth, User } from "firebase/auth";
+import { memo, useEffect } from "react";
+import { getAuth, connectAuthEmulator, Auth } from "firebase/auth";
 import { connectFirestoreEmulator, getFirestore } from "firebase/firestore";
 import {
   AuthProvider,
@@ -12,9 +12,9 @@ import {
 
 import { firebaseConfig } from "@/config/firebase";
 
-export const FirebaseConfigContext = ({
+export const FirebaseConfigContext = memo(function FirebaseConfigContext({
   children,
-}: React.PropsWithChildren) => {
+}: React.PropsWithChildren) {
   return (
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
       <AuthContext>
@@ -22,9 +22,11 @@ export const FirebaseConfigContext = ({
       </AuthContext>
     </FirebaseAppProvider>
   );
-};
+});
 
-export function FireStoreContext({ children }: React.PropsWithChildren) {
+export const FireStoreContext = memo(function FireStoreContext({
+  children,
+}: React.PropsWithChildren) {
   const firestoreInstance = getFirestore(useFirebaseApp());
   if (process.env.NODE_ENV === "development") {
     connectFirestoreEmulator(firestoreInstance, "localhost", 8080);
@@ -32,7 +34,7 @@ export function FireStoreContext({ children }: React.PropsWithChildren) {
   return (
     <FirestoreProvider sdk={firestoreInstance}>{children}</FirestoreProvider>
   );
-}
+});
 
 async function setupEmulators(auth: Auth) {
   const authUrl = "http://localhost:9099";
@@ -46,7 +48,9 @@ async function setupEmulators(auth: Auth) {
   }
 }
 
-export function AuthContext({ children }: React.PropsWithChildren) {
+export const AuthContext = memo(function AuthContext({
+  children,
+}: React.PropsWithChildren) {
   const auth = getAuth(useFirebaseApp());
 
   useEffect(() => {
@@ -56,4 +60,4 @@ export function AuthContext({ children }: React.PropsWithChildren) {
   }, []);
 
   return <AuthProvider sdk={auth}>{children}</AuthProvider>;
-}
+});

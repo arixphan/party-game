@@ -1,10 +1,12 @@
 "use client";
 
 import { connectFirestoreEmulator, getFirestore } from "firebase/firestore";
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import { FirestoreProvider, useFirebaseApp } from "reactfire";
 
-export function FireStoreContext({ children }: React.PropsWithChildren) {
+export const FireStoreContext = memo(function FireStoreContext({
+  children,
+}: React.PropsWithChildren) {
   const firestoreInstance = getFirestore(useFirebaseApp());
 
   useEffect(() => {
@@ -16,4 +18,4 @@ export function FireStoreContext({ children }: React.PropsWithChildren) {
   return (
     <FirestoreProvider sdk={firestoreInstance}>{children}</FirestoreProvider>
   );
-}
+});
