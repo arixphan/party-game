@@ -8,6 +8,7 @@ export namespace AppRoute {
   export const AUTH = {
     LOGIN: "/login",
     REGISTER: "/register",
+    FORGET_PASSWORD: "/forget-password",
   };
 }
 

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import {
   browserLocalPersistence,
+  browserSessionPersistence,
   getAuth,
   setPersistence,
   signInWithEmailAndPassword,
@@ -24,6 +25,7 @@ export const SignInForm = ({ className = "" }: { className?: string }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [responseError, setResponseError] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const router = useRouter();
 
@@ -60,7 +62,10 @@ export const SignInForm = ({ className = "" }: { className?: string }) => {
     setSubmitting(true);
 
     const auth = getAuth();
-    setPersistence(auth, browserLocalPersistence).then(() => {
+    setPersistence(
+      auth,
+      rememberMe ? browserLocalPersistence : browserSessionPersistence
+    ).then(() => {
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
@@ -109,12 +114,17 @@ export const SignInForm = ({ className = "" }: { className?: string }) => {
               id="remember"
               type="checkbox"
               className="mr-1 checked:bg-purple-700"
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
             />
             <label className="mr-auto text-xs font-semibold">Remember me</label>
           </div>
-          <a href="#" className="text-xs font-semibold text-indigo-700">
+          <Link
+            href={AppRoute.AUTH.FORGET_PASSWORD}
+            className="text-xs font-semibold text-indigo-700"
+          >
             Forgot password?
-          </a>
+          </Link>
         </div>
         <div className="mb-2">
           {errors.hasError &&

@@ -526,3 +526,55 @@ export const LogoutIcon = ({
     </svg>
   );
 };
+
+export const SendEmailIcon = ({
+  onClick,
+  className = "w-6 h-6",
+  color = "#6140B0",
+}: IconProps & { color?: string }) => {
+  return (
+    <svg
+      className={joinClasses(className)}
+      onClick={onClick}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M7.77734 8.5557L12.1996 11.8724C13.2662 12.6724 14.7329 12.6724 15.7996 11.8724L20.2218 8.55566"
+          stroke={color}
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+        <path
+          d="M11 17.8889H19C20.1046 17.8889 21 16.9935 21 15.8889V9C21 7.89543 20.1046 7 19 7H9C7.89543 7 7 7.89543 7 9V9.5"
+          stroke={color}
+          stroke-width="2"
+          stroke-linecap="round"
+        ></path>{" "}
+        <path
+          d="M8 13L6 13"
+          stroke={color}
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+        <path
+          d="M8 16L3 16"
+          stroke={color}
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </g>
+    </svg>
+  );
+};

@@ -47,7 +47,6 @@ async function setupEmulators(auth: Auth) {
 }
 
 export function AuthContext({ children }: React.PropsWithChildren) {
-  const [user, setUser] = useState<User | null>(null);
   const auth = getAuth(useFirebaseApp());
 
   useEffect(() => {

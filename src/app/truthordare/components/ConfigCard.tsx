@@ -1,5 +1,5 @@
 "use client";
-import { memo } from "react";
+import { memo, useState } from "react";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -12,6 +12,7 @@ import { AppRoute } from "@/constants/route";
 import { MAX_CUSTOM_SUITE } from "@/constants/truthordare";
 
 import { useAddDoc, useCollectionRef } from "@/hooks/firebase";
+import { LoadingWrapper } from "@/app/shares/progress/LoadingWrapper";
 
 interface GameCardProps {
   className?: string;
@@ -118,6 +119,7 @@ const CustomOptions = memo(function CustomOptions({
   userId,
 }: CustomOptionsProps) {
   const router = useRouter();
+  const [pending, setPending] = useState(false);
 
   const res = useCollectionRef(userId, ["truthordare", "suites"]);
 
@@ -126,12 +128,14 @@ const CustomOptions = memo(function CustomOptions({
   const addDoc = useAddDoc(userId, "truthordare", "suites");
 
   const handleCreateNew = async () => {
+    setPending(true);
     try {
       const response = await addDoc({
         title: "No title",
       });
       router.push(`${AppRoute.TRUTH_OR_DARE.CUSTOM}/${response.id}`);
     } catch (error) {
+      setPending(false);
       console.log(error);
     }
   };
@@ -149,7 +153,7 @@ const CustomOptions = memo(function CustomOptions({
   }
 
   return (
-    <>
+    <LoadingWrapper loading={pending}>
       {data.map((item) => (
         <ConfigOption
           key={item.id}
@@ -166,7 +170,7 @@ const CustomOptions = memo(function CustomOptions({
           onClick={handleCreateNew}
         />
       )}
-    </>
+    </LoadingWrapper>
   );
 });
 

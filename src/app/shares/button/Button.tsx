@@ -24,7 +24,7 @@ export const Button = (props: ButtonProps) => {
         {
           "bg-gray-400": Boolean(disabled),
         },
-        BUTTON_VARIANT_CLASS_MAP[variant] || ""
+        !disabled ? BUTTON_VARIANT_CLASS_MAP[variant] || "" : ""
       )}
     >
       {children}
