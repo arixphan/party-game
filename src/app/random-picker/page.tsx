@@ -156,8 +156,8 @@ export default function RandomPicker() {
         <div className="flex justify-center gap-2">
           <div
             className={joinClasses(
-              "p-4 bg-slate-200 rounded select-none cursor-pointer font-bold",
-              { "ring-4 ring-blue-400": type === "picker" }
+              "p-4 bg-slate-200 rounded select-none cursor-pointer font-bold text-purple-700",
+              { "ring-4 ring-purple-400": type === "picker" }
             )}
             onClick={() => setType("picker")}
           >
@@ -165,8 +165,8 @@ export default function RandomPicker() {
           </div>
           <div
             className={joinClasses(
-              "p-4 bg-slate-200 rounded select-none cursor-pointer font-bold",
-              { "ring-4 ring-blue-400": type === "group" }
+              "p-4 bg-slate-200 rounded select-none cursor-pointer font-bold text-purple-700",
+              { "ring-4 ring-purple-400": type === "group" }
             )}
             onClick={() => setType("group")}
           >
@@ -199,7 +199,9 @@ export default function RandomPicker() {
                 Number of groups
               </Checkbox>
               <Input
-                className="w-1/2"
+                className={joinClasses("w-1/2", {
+                  "bg-gray-200": groupType !== "group",
+                })}
                 value={noOfGroup}
                 placeholder="Please input number"
                 min={0}
@@ -212,12 +214,14 @@ export default function RandomPicker() {
                 value={"itemPerGroup"}
                 checked={groupType === "item"}
                 onChange={() => setGroupType("item")}
-                className="w-1/2"
+                className="w-1/2 "
               >
                 Items per group
               </Checkbox>
               <Input
-                className="w-1/2"
+                className={joinClasses("w-1/2", {
+                  "bg-gray-200": groupType !== "item",
+                })}
                 value={itemPerGroup}
                 placeholder="Please input number"
                 min={0}
@@ -227,15 +231,12 @@ export default function RandomPicker() {
             </div>
           </>
         )}
-        <Button className="w-full" onClick={handleRandom}>
-          {type === "picker" && (
-            <>
-              Pick{" "}
-              <span className="font-bold text-black">
-                {noOfPickedItems || 0}
-              </span>
-            </>
-          )}
+        <Button
+          className="w-full bg-purple-700 hover:bg-purple-700 text-white select-none"
+          onClick={handleRandom}
+          variant="custom"
+        >
+          {type === "picker" && "Pick"}
           {type === "group" && "Generate"}
         </Button>
         {type === "picker" && (
@@ -279,7 +280,7 @@ export default function RandomPicker() {
           </LoadingWrapper>
         )}
 
-        {type === "group" && (
+        {type === "group" && groupResult.length > 0 && (
           <LoadingWrapper loading={spinning}>
             <div className="flex justify-end gap-2">
               <CopyIcon
@@ -321,7 +322,7 @@ export default function RandomPicker() {
           </div>
         </div>
         <TextArea
-          placeholder="Names, numbers... "
+          placeholder="Names, numbers, choices... "
           value={stringItems}
           onChange={onTextAreaChange}
           rows={10}

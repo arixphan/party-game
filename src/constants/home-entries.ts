@@ -17,10 +17,10 @@ export const HOME_ENTRIES = [
     description:
       "Random Picker is your go-to companion for making unbiased and fun choices. Whether it's picking winners for contests, selecting restaurants, or just adding a twist to decision-making, this nifty tool ensures randomness and excitement in every pick!",
     cover: {
-      img: "/cover/random-picker.png",
+      img: "/cover/random-picker-2.png",
       alt: "art cover",
     },
   },
 ];
 
-export type HomeEntry = (typeof MainListEntries)[number];
+export type HomeEntry = (typeof HOME_ENTRIES)[number];

@@ -23,5 +23,12 @@ export const getHeaderSlot = (path: string): React.ReactNode => {
       </div>
     );
   }
+  if (path.startsWith(AppRoute.RANDOM.RANDOM_PICKER)) {
+    return (
+      <div className="bg-gray-200 px-4 rounded-lg text-2xl font-black text-fuchsia-700 pointer-events-none">
+        Random Picker
+      </div>
+    );
+  }
   return null;
 };

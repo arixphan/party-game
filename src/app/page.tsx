@@ -42,11 +42,11 @@ const GameItem = ({ cover, description, href, title }: GameItemProps) => {
       group sm:flex space-x-6 bg-white shadow-xl
       hover:shadow-indigo-400"
       >
-        <div className="mx-auto block w-40 md:w-4/12 h-40 relative">
+        <div className="mx-auto block w-40 h-40 md:w-4/12 relative">
           {cover}
         </div>
 
-        <div className="sm:w-8/12 h-full  pl-0 p-2">
+        <div className="sm:w-8/12 h-full pl-0 p-2">
           <h1 className="text-lg font-black text-cyan-900 text-justify">
             {title}
           </h1>

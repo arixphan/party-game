@@ -1,10 +1,11 @@
 import { joinClasses } from "@/utils/css";
 import { ButtonHTMLAttributes } from "react";
 
-export type ButtonType = "primary" | "secondary";
+export type ButtonType = "primary" | "secondary" | "custom";
 export const BUTTON_VARIANT_CLASS_MAP: Record<ButtonType, string> = {
   primary: "text-white bg-indigo-500 hover:bg-indigo-600",
   secondary: "text-black border border-gray-300 hover:border-gray-500",
+  custom: "",
 };
 
 export interface ButtonProps

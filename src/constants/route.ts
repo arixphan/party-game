@@ -14,3 +14,8 @@ export namespace AppRoute {
     RANDOM_PICKER: "/random-picker",
   };
 }
+
+export const AuthRoutes = [
+  AppRoute.TRUTH_OR_DARE.CUSTOM,
+  AppRoute.TRUTH_OR_DARE.PLAY,
+];
