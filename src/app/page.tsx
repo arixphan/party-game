@@ -1,24 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { AppRoute } from "@/constants/route";
+import { HOME_ENTRIES } from "@/constants/home-entries";
 
 export default function Home() {
   return (
     <div className="flex-auto w-full mt-12 lg:w-3/6 sm:mb-0 px-6 pd:mx-0 flex flex-col gap-4">
-      <GameItem
-        href={AppRoute.TRUTH_OR_DARE.INDEX}
-        description="Get pumped for Truth or Dare, the ultimate party game! Share hilarious truths or conquer epic dares with your awesome pals. Get ready to laugh, bond, and make memories like never before! 🎉😄        "
-        title="Truth or Dare"
-        cover={
-          <Image
-            className="rounded-lg"
-            alt="art cover"
-            src="/cover/truthordare.gif"
-            fill
+      {HOME_ENTRIES.map((entry) => {
+        return (
+          <GameItem
+            key={entry.url}
+            href={entry.url}
+            description={entry.description}
+            title={entry.title}
+            cover={
+              <Image
+                className="rounded-lg"
+                alt={entry.cover.alt}
+                src={entry.cover.img}
+                fill
+              />
+            }
           />
-        }
-      />
+        );
+      })}
     </div>
   );
 }
@@ -37,7 +42,7 @@ const GameItem = ({ cover, description, href, title }: GameItemProps) => {
       group sm:flex space-x-6 bg-white shadow-xl
       hover:shadow-indigo-400"
       >
-        <div className="mx-auto block w-full md:w-4/12 h-40  relative">
+        <div className="mx-auto block w-40 md:w-4/12 h-40 relative">
           {cover}
         </div>
 

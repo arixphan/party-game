@@ -10,9 +10,7 @@ export namespace AppRoute {
     REGISTER: "/register",
     FORGET_PASSWORD: "/forget-password",
   };
+  export const RANDOM = {
+    RANDOM_PICKER: "/random-picker",
+  };
 }
-
-export const AuthRoutes = [
-  AppRoute.TRUTH_OR_DARE.CUSTOM,
-  AppRoute.TRUTH_OR_DARE.PLAY,
-];
