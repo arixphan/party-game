@@ -12,6 +12,7 @@ export namespace AppRoute {
   };
   export const RANDOM = {
     RANDOM_PICKER: "/random-picker",
+    WHEEL_OF_BEER: "/wheel-of-beer",
   };
 }
 

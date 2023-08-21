@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 interface WheelComponentProps {
@@ -6,6 +7,7 @@ interface WheelComponentProps {
   segColors: string[];
   winningSegment?: string;
   onFinished: (value: any) => void;
+  onStart?: () => void;
   primaryColor: string;
   primaryColoraround: string;
   contrastColor: string;
@@ -24,6 +26,7 @@ const WheelComponent = ({
   segColors,
   winningSegment,
   onFinished,
+  onStart,
   primaryColor,
   primaryColoraround,
   contrastColor,
@@ -43,7 +46,7 @@ const WheelComponent = ({
   const timerDelay = segments.length;
   let angleCurrent = 0;
   let angleDelta = 0;
-  let canvasContext: any = null;
+  let canvasContext: CanvasRenderingContext2D | null = null;
   let maxSpeed = Math.PI / segments.length;
   const upTime = segments.length * upDuration;
   const downTime = segments.length * downDuration;
@@ -54,16 +57,18 @@ const WheelComponent = ({
   useEffect(() => {
     wheelInit();
     setTimeout(() => {
-      window.scrollTo(0, 1);
+      window.scrollTo(0, 100);
     }, 0);
-  }, []);
+  }, [segments]);
   const wheelInit = () => {
     initCanvas();
     wheelDraw();
   };
 
   const initCanvas = () => {
-    let canvas: any = document.getElementById("canvas");
+    let canvas: HTMLCanvasElement = document.getElementById(
+      "canvas"
+    ) as HTMLCanvasElement;
     if (navigator.appVersion.indexOf("MSIE") !== -1) {
       canvas = document.createElement("canvas");
       canvas.setAttribute("width", String(width));
@@ -78,10 +83,11 @@ const WheelComponent = ({
   const spin = () => {
     isStarted = true;
     // onRotate();
+    onStart && onStart();
     if (timerHandle === 0) {
       spinStart = new Date().getTime();
-      maxSpeed = Math.PI / (segments.length * 2 + Math.random());
-      //   maxSpeed = Math.PI / segments.length;
+      // maxSpeed = Math.PI / (segments.length * 2 + Math.random());
+      maxSpeed = Math.PI / segments.length;
       frames = 0;
       timerHandle = setInterval(onTimerTick, timerDelay);
     }
@@ -92,6 +98,7 @@ const WheelComponent = ({
     const duration = new Date().getTime() - spinStart;
     let progress = 0;
     let finished = false;
+
     if (duration < upTime) {
       progress = duration / upTime;
       angleDelta = maxSpeed * Math.sin((progress * Math.PI) / 2);
@@ -147,6 +154,9 @@ const WheelComponent = ({
 
   const drawSegment = (key: number, lastAngle: number, angle: number) => {
     const ctx = canvasContext;
+    if (!ctx) {
+      return;
+    }
     const value = segments[key];
     ctx.save();
     ctx.beginPath();
@@ -162,12 +172,21 @@ const WheelComponent = ({
     ctx.rotate((lastAngle + angle) / 2);
     ctx.fillStyle = contrastColor || "white";
     ctx.font = "bold 1em " + fontFamily;
-    ctx.fillText(value.substr(0, 21), size / 2 + 20, 0);
+    // ctx.fillText(value.substr(0, 21), size / 2 + 20, 0);
+
+    if (value === "drink") {
+      const image: any = document.getElementById("art");
+      ctx.drawImage(image, size / 2, -36, 64, 64);
+    }
+
     ctx.restore();
   };
 
   const drawWheel = () => {
     const ctx = canvasContext;
+    if (!ctx) {
+      return;
+    }
     let lastAngle = angleCurrent;
     const len = segments.length;
     const PI2 = Math.PI * 2;
@@ -207,9 +226,12 @@ const WheelComponent = ({
 
   const drawNeedle = () => {
     const ctx = canvasContext;
+    if (!ctx) {
+      return;
+    }
     ctx.lineWidth = 1;
     ctx.strokeStyle = contrastColor || "white";
-    ctx.fileStyle = contrastColor || "white";
+    ctx.fillStyle = contrastColor || "white";
     ctx.beginPath();
     ctx.moveTo(centerX + 10, centerY - 40);
     ctx.lineTo(centerX - 10, centerY - 40);
@@ -232,17 +254,31 @@ const WheelComponent = ({
   };
   const clear = () => {
     const ctx = canvasContext;
+    if (!ctx) {
+      return;
+    }
     ctx.clearRect(0, 0, 1000, 800);
   };
   return (
-    <div className="w-full">
+    <div>
       <canvas
+        className="cursor-pointer"
         id="canvas"
         width="600"
         height="600"
         style={{
           pointerEvents: isFinished && isOnlyOnce ? "none" : "auto",
         }}
+      />
+      <Image
+        className="hidden"
+        id="art"
+        src="/icon/beer-2.svg"
+        alt="beer"
+        width={32}
+        height={32}
+        priority
+        fetchPriority="high"
       />
     </div>
   );

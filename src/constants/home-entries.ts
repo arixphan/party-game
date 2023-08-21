@@ -21,6 +21,17 @@ export const HOME_ENTRIES = [
       alt: "art cover",
     },
   },
+  {
+    url: AppRoute.RANDOM.WHEEL_OF_BEER,
+    title: "Wheel Of Beer",
+    description: `Get ready for a laugh-filled sip session! Spin the wheel, 
+    and if it hits beer, destiny calls. It's tipsy chance, glass-raising fun with the beer gods. 
+    Cheers to spinning, winning, and good times guaranteed! 🍻🎉`,
+    cover: {
+      img: "/cover/wheel-of-beer.png",
+      alt: "art cover",
+    },
+  },
 ];
 
 export type HomeEntry = (typeof HOME_ENTRIES)[number];

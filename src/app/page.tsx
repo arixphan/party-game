@@ -18,7 +18,8 @@ export default function Home() {
                 className="rounded-lg"
                 alt={entry.cover.alt}
                 src={entry.cover.img}
-                fill
+                width={150}
+                height={150}
               />
             }
           />
@@ -42,9 +43,7 @@ const GameItem = ({ cover, description, href, title }: GameItemProps) => {
       group sm:flex space-x-6 bg-white shadow-xl
       hover:shadow-indigo-400"
       >
-        <div className="mx-auto block w-40 h-40 md:w-4/12 relative">
-          {cover}
-        </div>
+        {cover}
 
         <div className="sm:w-8/12 h-full pl-0 p-2">
           <h1 className="text-lg font-black text-cyan-900 text-justify">

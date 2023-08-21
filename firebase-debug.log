@@ -1,51 +1,187 @@
-[debug] [2023-08-15T15:27:25.747Z] ----------------------------------------------------------------------
-[debug] [2023-08-15T15:27:25.749Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arix\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2023-08-15T15:27:25.750Z] CLI Version:   12.4.5
-[debug] [2023-08-15T15:27:25.750Z] Platform:      win32
-[debug] [2023-08-15T15:27:25.751Z] Node Version:  v18.16.0
-[debug] [2023-08-15T15:27:25.751Z] Time:          Tue Aug 15 2023 22:27:25 GMT+0700 (Indochina Time)
-[debug] [2023-08-15T15:27:25.752Z] ----------------------------------------------------------------------
+[debug] [2023-08-20T15:26:07.454Z] ----------------------------------------------------------------------
+[debug] [2023-08-20T15:26:07.456Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arix\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-08-20T15:26:07.458Z] CLI Version:   12.4.5
+[debug] [2023-08-20T15:26:07.459Z] Platform:      win32
+[debug] [2023-08-20T15:26:07.459Z] Node Version:  v18.16.0
+[debug] [2023-08-20T15:26:07.475Z] Time:          Sun Aug 20 2023 22:26:07 GMT+0700 (Indochina Time)
+[debug] [2023-08-20T15:26:07.475Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-08-15T15:27:25.916Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-08-15T15:27:25.917Z] > authorizing via FIREBASE_TOKEN environment variable
+[debug] [2023-08-20T15:26:07.480Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-08-20T15:26:07.687Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-20T15:26:07.688Z] > authorizing via FIREBASE_TOKEN environment variable
 [warn] !  Authenticating with `FIREBASE_TOKEN` is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
-[debug] [2023-08-15T15:27:26.139Z] openjdk version "17.0.2" 2022-01-18
+[debug] [2023-08-20T15:26:08.485Z] openjdk version "17.0.2" 2022-01-18
+
+[debug] [2023-08-20T15:26:08.485Z] OpenJDK Runtime Environment (build 17.0.2+8-86)
+OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
+
+[debug] [2023-08-20T15:26:08.512Z] Parsed Java major version: 17
+[info] i  emulators: Starting emulators: auth, functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting"}}
+[debug] [2023-08-20T15:26:08.536Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-20T15:26:08.536Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-20T15:26:08.536Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-20T15:26:08.536Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-20T15:26:08.536Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-20T15:26:08.537Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-08-20T15:26:08.553Z] [hub] writing locator at C:\Users\Arix\AppData\Local\Temp\hub-party-game-34121.json
+[debug] [2023-08-20T15:26:08.575Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-20T15:26:08.576Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-20T15:26:08.576Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, pubsub, storage\u001b[22m"}}
+[debug] [2023-08-20T15:26:08.582Z] defaultcredentials: writing to file C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json
+[debug] [2023-08-20T15:26:08.587Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-08-20T15:26:08.587Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-08-20T15:26:08.598Z] Setting GAC to C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Arix\\AppData\\Roaming\\firebase\\dongho120123_gmail_com_application_default_credentials.json"}}
+[debug] [2023-08-20T15:26:08.600Z] > refreshing access token with scopes: []
+[debug] [2023-08-20T15:26:08.601Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-08-20T15:26:08.602Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-20T15:26:08.764Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-08-20T15:26:08.764Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-20T15:26:08.765Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig [none]
+[debug] [2023-08-20T15:26:09.180Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig 200
+[debug] [2023-08-20T15:26:09.180Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig {"projectId":"party-game-34121","storageBucket":"party-game-34121.appspot.com"}
+[debug] [2023-08-20T15:26:09.199Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-08-20T15:26:09.199Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2023-08-20T15:26:09.199Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\Arix\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","party-game-34121","--rules","D:\\WebWorkspace\\party-game\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"party-game-34121\",\"--rules\",\"D:\\\\WebWorkspace\\\\party-game\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2023-08-20T15:26:11.281Z] Aug 20, 2023 10:26:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 20, 2023 10:26:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
+[debug] [2023-08-20T15:26:11.374Z] API endpoint: http://127.0.0.1:8080 {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://127.0.0.1:8080"}}
+[debug] [2023-08-20T15:26:11.374Z] 
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\r\n"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2023-08-20T15:26:21.368Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 
+[debug] [2023-08-20T15:26:21.940Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 200
+[debug] [2023-08-20T15:26:21.941Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites {"sites":[{"name":"projects/party-game-34121/sites/party-game-34121","defaultUrl":"https://party-game-34121.web.app","appId":"1:380048439162:web:516482698fb540b40808c3","type":"DEFAULT_SITE"}]}
+[debug] [2023-08-20T15:26:21.941Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config [none]
+[debug] [2023-08-20T15:26:23.072Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config 200
+[debug] [2023-08-20T15:26:23.072Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config {"projectId":"party-game-34121","appId":"1:380048439162:web:516482698fb540b40808c3","storageBucket":"party-game-34121.appspot.com","apiKey":"AIzaSyDWUrY1_dvBYW6HqUc9QncX11WwXvzDbIo","authDomain":"party-game-34121.firebaseapp.com","messagingSenderId":"380048439162","measurementId":"G-7CVSE9EHVB"}
+[debug] [2023-08-20T15:26:23.088Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 [none]
+[debug] [2023-08-20T15:26:23.456Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 200
+[debug] [2023-08-20T15:26:23.457Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 {"projectId":"party-game-34121","projectNumber":"380048439162","displayName":"party-game","name":"projects/party-game-34121","resources":{"hostingSite":"party-game-34121"},"state":"ACTIVE","etag":"1_971eb8fd-c0c0-43c2-b3b8-48794f432e08"}
+[info] i  hosting[party-game-34121]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[party-game-34121]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2023-08-20T15:26:23.528Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-08-20T15:26:23.528Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-08-20T15:26:23.529Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Arix\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-08-20T15:26:23.679Z] Web / API server started at 127.0.0.1:8081
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:8081\n"}}
+[debug] [2023-08-20T15:26:23.679Z] Web / API server started at ::1:8081
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:8081\n"}}
+[info] i  functions: Watching "D:\WebWorkspace\party-game\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"D:\\WebWorkspace\\party-game\\functions\" for Cloud Functions..."}}
+[debug] [2023-08-20T15:26:23.813Z] Validating nodejs source
+[debug] [2023-08-20T15:26:29.466Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: There was an error reading functions\package.json:
+
+ functions\lib\index.js does not exist, can't deploy Cloud Functions {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading functions\\package.json:\n\n functions\\lib\\index.js does not exist, can't deploy Cloud Functions"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:8081/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:8081/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:8081/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:8081/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5000 │ n/a                             │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-08-21T14:52:43.915Z] ----------------------------------------------------------------------
+[debug] [2023-08-21T14:52:43.919Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arix\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-08-21T14:52:43.919Z] CLI Version:   12.4.5
+[debug] [2023-08-21T14:52:43.920Z] Platform:      win32
+[debug] [2023-08-21T14:52:43.920Z] Node Version:  v18.16.0
+[debug] [2023-08-21T14:52:43.939Z] Time:          Mon Aug 21 2023 21:52:43 GMT+0700 (Indochina Time)
+[debug] [2023-08-21T14:52:43.939Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-21T14:52:44.144Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-21T14:52:44.145Z] > authorizing via FIREBASE_TOKEN environment variable
+[warn] !  Authenticating with `FIREBASE_TOKEN` is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[debug] [2023-08-21T14:52:44.348Z] openjdk version "17.0.2" 2022-01-18
 OpenJDK Runtime Environment (build 17.0.2+8-86)
+OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
 
-[debug] [2023-08-15T15:27:26.140Z] OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
-
-[debug] [2023-08-15T15:27:26.163Z] Parsed Java major version: 17
+[debug] [2023-08-21T14:52:44.358Z] Parsed Java major version: 17
 [info] i  emulators: Starting emulators: auth, functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting"}}
-[debug] [2023-08-15T15:27:26.179Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-15T15:27:26.179Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-15T15:27:26.179Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-15T15:27:26.180Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-15T15:27:26.180Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-15T15:27:26.180Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2023-08-15T15:27:26.192Z] [hub] writing locator at C:\Users\Arix\AppData\Local\Temp\hub-party-game-34121.json
-[debug] [2023-08-15T15:27:26.204Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-15T15:27:26.205Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-15T15:27:26.205Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[debug] [2023-08-21T14:52:44.388Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-21T14:52:44.389Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-21T14:52:44.389Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-21T14:52:44.390Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-21T14:52:44.390Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-21T14:52:44.390Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project party-game-34121. This may result in unexpected behavior. 
+[debug] [2023-08-21T14:52:44.412Z] [hub] writing locator at C:\Users\Arix\AppData\Local\Temp\hub-party-game-34121.json
+[debug] [2023-08-21T14:52:44.431Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-21T14:52:44.431Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-21T14:52:44.431Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
 [warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, pubsub, storage\u001b[22m"}}
-[debug] [2023-08-15T15:27:26.211Z] defaultcredentials: writing to file C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json
-[debug] [2023-08-15T15:27:26.214Z] Setting GAC to C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Arix\\AppData\\Roaming\\firebase\\dongho120123_gmail_com_application_default_credentials.json"}}
-[debug] [2023-08-15T15:27:26.217Z] > refreshing access token with scopes: []
-[debug] [2023-08-15T15:27:26.218Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-08-15T15:27:26.218Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-08-15T15:27:26.662Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-08-15T15:27:26.662Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-08-15T15:27:26.663Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig [none]
-[debug] [2023-08-15T15:27:27.524Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig 200
-[debug] [2023-08-15T15:27:27.524Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig {"projectId":"party-game-34121","storageBucket":"party-game-34121.appspot.com"}
-[debug] [2023-08-15T15:27:27.545Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-08-15T15:27:27.545Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2023-08-15T15:27:27.545Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\Arix\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","party-game-34121","--rules","D:\\WebWorkspace\\party-game\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"party-game-34121\",\"--rules\",\"D:\\\\WebWorkspace\\\\party-game\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2023-08-21T14:52:44.438Z] defaultcredentials: writing to file C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json
+[debug] [2023-08-21T14:52:44.442Z] Setting GAC to C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Arix\\AppData\\Roaming\\firebase\\dongho120123_gmail_com_application_default_credentials.json"}}
+[debug] [2023-08-21T14:52:44.445Z] > refreshing access token with scopes: []
+[debug] [2023-08-21T14:52:44.447Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-08-21T14:52:44.448Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-21T14:52:44.807Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-08-21T14:52:44.807Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-21T14:52:44.808Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig [none]
+[debug] [2023-08-21T14:52:45.274Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig 200
+[debug] [2023-08-21T14:52:45.274Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig {"projectId":"party-game-34121","storageBucket":"party-game-34121.appspot.com"}
+[debug] [2023-08-21T14:52:45.299Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-08-21T14:52:45.300Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2023-08-21T14:52:45.300Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\Arix\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","party-game-34121","--rules","D:\\WebWorkspace\\party-game\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"party-game-34121\",\"--rules\",\"D:\\\\WebWorkspace\\\\party-game\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2023-08-15T15:27:29.222Z] Aug 15, 2023 10:27:29 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+[debug] [2023-08-21T14:52:47.722Z] Aug 21, 2023 9:52:47 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
 INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 15, 2023 10:27:29 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
-[debug] [2023-08-15T15:27:29.319Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
-[debug] [2023-08-15T15:27:29.319Z] 127.0.0.1:8080
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2023 9:52:47 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
+[debug] [2023-08-21T14:52:47.914Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2023-08-21T14:52:47.915Z] 127.0.0.1:8080
 If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
 
    export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
@@ -54,704 +190,28 @@ Dev App Server is now running.
 
  {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\r\n"}}
 [info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2023-08-15T15:27:37.185Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 
-[debug] [2023-08-15T15:27:38.023Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 200
-[debug] [2023-08-15T15:27:38.023Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites {"sites":[{"name":"projects/party-game-34121/sites/party-game-34121","defaultUrl":"https://party-game-34121.web.app","appId":"1:380048439162:web:516482698fb540b40808c3","type":"DEFAULT_SITE"}]}
-[debug] [2023-08-15T15:27:38.023Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config [none]
-[debug] [2023-08-15T15:27:39.303Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config 200
-[debug] [2023-08-15T15:27:39.303Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config {"projectId":"party-game-34121","appId":"1:380048439162:web:516482698fb540b40808c3","storageBucket":"party-game-34121.appspot.com","apiKey":"AIzaSyDWUrY1_dvBYW6HqUc9QncX11WwXvzDbIo","authDomain":"party-game-34121.firebaseapp.com","messagingSenderId":"380048439162","measurementId":"G-7CVSE9EHVB"}
-[debug] [2023-08-15T15:27:39.322Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 [none]
-[debug] [2023-08-15T15:27:39.967Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 200
-[debug] [2023-08-15T15:27:39.967Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 {"projectId":"party-game-34121","projectNumber":"380048439162","displayName":"party-game","name":"projects/party-game-34121","resources":{"hostingSite":"party-game-34121"},"state":"ACTIVE","etag":"1_971eb8fd-c0c0-43c2-b3b8-48794f432e08"}
+[debug] [2023-08-21T14:52:58.830Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 
+[debug] [2023-08-21T14:52:59.725Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 200
+[debug] [2023-08-21T14:52:59.725Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites {"sites":[{"name":"projects/party-game-34121/sites/party-game-34121","defaultUrl":"https://party-game-34121.web.app","appId":"1:380048439162:web:516482698fb540b40808c3","type":"DEFAULT_SITE"}]}
+[debug] [2023-08-21T14:52:59.726Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config [none]
+[debug] [2023-08-21T14:53:00.954Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config 200
+[debug] [2023-08-21T14:53:00.954Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config {"projectId":"party-game-34121","appId":"1:380048439162:web:516482698fb540b40808c3","storageBucket":"party-game-34121.appspot.com","apiKey":"AIzaSyDWUrY1_dvBYW6HqUc9QncX11WwXvzDbIo","authDomain":"party-game-34121.firebaseapp.com","messagingSenderId":"380048439162","measurementId":"G-7CVSE9EHVB"}
+[debug] [2023-08-21T14:53:00.960Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 [none]
+[debug] [2023-08-21T14:53:01.470Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 200
+[debug] [2023-08-21T14:53:01.470Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 {"projectId":"party-game-34121","projectNumber":"380048439162","displayName":"party-game","name":"projects/party-game-34121","resources":{"hostingSite":"party-game-34121"},"state":"ACTIVE","etag":"1_971eb8fd-c0c0-43c2-b3b8-48794f432e08"}
 [info] i  hosting[party-game-34121]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
 [info] +  hosting[party-game-34121]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
-[debug] [2023-08-15T15:27:40.108Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-08-15T15:27:40.108Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-08-15T15:27:40.108Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Arix\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[debug] [2023-08-21T14:53:01.521Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-08-21T14:53:01.521Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-08-21T14:53:01.521Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Arix\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-08-15T15:27:40.356Z] Web / API server started at 127.0.0.1:8081
+[debug] [2023-08-21T14:53:01.790Z] Web / API server started at 127.0.0.1:8081
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:8081\n"}}
-[debug] [2023-08-15T15:27:40.357Z] Web / API server started at ::1:8081
+[debug] [2023-08-21T14:53:01.791Z] Web / API server started at ::1:8081
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:8081\n"}}
 [info] i  functions: Watching "D:\WebWorkspace\party-game\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"D:\\WebWorkspace\\party-game\\functions\" for Cloud Functions..."}}
-[debug] [2023-08-15T15:27:40.436Z] Validating nodejs source
-[debug] [2023-08-15T15:27:50.463Z] > [functions] package.json contents: {
-  "name": "functions",
-  "scripts": {
-    "lint": "eslint --ext .js,.ts .",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "18"
-  },
-  "main": "lib/index.js",
-  "dependencies": {
-    "firebase-admin": "^11.8.0",
-    "firebase-functions": "^4.3.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
-    "eslint": "^8.9.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-import": "^2.25.4",
-    "firebase-functions-test": "^3.1.0",
-    "typescript": "^4.9.0"
-  },
-  "private": true
-}
-[error] !!  functions: Failed to load function definition from source: FirebaseError: There was an error reading functions\package.json:
-
- functions\lib\index.js does not exist, can't deploy Cloud Functions {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading functions\\package.json:\n\n functions\\lib\\index.js does not exist, can't deploy Cloud Functions"}}
-[info] 
-┌─────────────────────────────────────────────────────────────┐
-│ ✔  All emulators ready! It is now safe to connect your app. │
-│ i  View Emulator UI at http://127.0.0.1:8081/               │
-└─────────────────────────────────────────────────────────────┘
-
-┌────────────────┬────────────────┬─────────────────────────────────┐
-│ Emulator       │ Host:Port      │ View in Emulator UI             │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:8081/auth      │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:8081/functions │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:8081/firestore │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Hosting        │ 127.0.0.1:5000 │ n/a                             │
-└────────────────┴────────────────┴─────────────────────────────────┘
-  Emulator Hub running at 127.0.0.1:4400
-  Other reserved ports: 4500, 9150
-
-Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
- 
-[debug] [2023-08-15T17:57:53.782Z] Received signal SIGHUP 1
-[debug] [2023-08-16T15:02:32.016Z] ----------------------------------------------------------------------
-[debug] [2023-08-16T15:02:32.018Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arix\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2023-08-16T15:02:32.019Z] CLI Version:   12.4.5
-[debug] [2023-08-16T15:02:32.019Z] Platform:      win32
-[debug] [2023-08-16T15:02:32.019Z] Node Version:  v18.16.0
-[debug] [2023-08-16T15:02:32.033Z] Time:          Wed Aug 16 2023 22:02:32 GMT+0700 (Indochina Time)
-[debug] [2023-08-16T15:02:32.033Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2023-08-16T15:02:32.037Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2023-08-16T15:02:32.187Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-08-16T15:02:32.188Z] > authorizing via FIREBASE_TOKEN environment variable
-[warn] !  Authenticating with `FIREBASE_TOKEN` is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
-[debug] [2023-08-16T15:02:32.460Z] openjdk version "17.0.2" 2022-01-18
-
-[debug] [2023-08-16T15:02:32.461Z] OpenJDK Runtime Environment (build 17.0.2+8-86)
-OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
-
-[debug] [2023-08-16T15:02:32.483Z] Parsed Java major version: 17
-[info] i  emulators: Starting emulators: auth, functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting"}}
-[debug] [2023-08-16T15:02:32.518Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-16T15:02:32.518Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-16T15:02:32.518Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-16T15:02:32.519Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-16T15:02:32.519Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-16T15:02:32.519Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project party-game-34121. This may result in unexpected behavior. 
-[debug] [2023-08-16T15:02:32.540Z] [hub] writing locator at C:\Users\Arix\AppData\Local\Temp\hub-party-game-34121.json
-[debug] [2023-08-16T15:02:32.579Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-16T15:02:32.580Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-16T15:02:32.580Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
-[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, pubsub, storage\u001b[22m"}}
-[debug] [2023-08-16T15:02:32.597Z] defaultcredentials: writing to file C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json
-[debug] [2023-08-16T15:02:32.603Z] Setting GAC to C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Arix\\AppData\\Roaming\\firebase\\dongho120123_gmail_com_application_default_credentials.json"}}
-[debug] [2023-08-16T15:02:32.606Z] > refreshing access token with scopes: []
-[debug] [2023-08-16T15:02:32.607Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-08-16T15:02:32.608Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-08-16T15:02:32.907Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-08-16T15:02:32.907Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-08-16T15:02:32.909Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig [none]
-[debug] [2023-08-16T15:02:33.017Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2023-08-16T15:02:33.017Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[debug] [2023-08-16T15:02:33.402Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig 200
-[debug] [2023-08-16T15:02:33.402Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig {"projectId":"party-game-34121","storageBucket":"party-game-34121.appspot.com"}
-[debug] [2023-08-16T15:02:33.424Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-08-16T15:02:33.424Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2023-08-16T15:02:33.424Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\Arix\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","party-game-34121","--rules","D:\\WebWorkspace\\party-game\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"party-game-34121\",\"--rules\",\"D:\\\\WebWorkspace\\\\party-game\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
-[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2023-08-16T15:02:35.587Z] Aug 16, 2023 10:02:35 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
-INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 16, 2023 10:02:35 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
-[debug] [2023-08-16T15:02:35.857Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
-[debug] [2023-08-16T15:02:35.859Z] 127.0.0.1:8080
-If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
-
-   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
-
-Dev App Server is now running.
-
- {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\r\n"}}
-[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2023-08-16T15:02:48.635Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 
-[debug] [2023-08-16T15:02:49.301Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 200
-[debug] [2023-08-16T15:02:49.301Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites {"sites":[{"name":"projects/party-game-34121/sites/party-game-34121","defaultUrl":"https://party-game-34121.web.app","appId":"1:380048439162:web:516482698fb540b40808c3","type":"DEFAULT_SITE"}]}
-[debug] [2023-08-16T15:02:49.301Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config [none]
-[debug] [2023-08-16T15:02:50.407Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config 200
-[debug] [2023-08-16T15:02:50.407Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config {"projectId":"party-game-34121","appId":"1:380048439162:web:516482698fb540b40808c3","storageBucket":"party-game-34121.appspot.com","apiKey":"AIzaSyDWUrY1_dvBYW6HqUc9QncX11WwXvzDbIo","authDomain":"party-game-34121.firebaseapp.com","messagingSenderId":"380048439162","measurementId":"G-7CVSE9EHVB"}
-[debug] [2023-08-16T15:02:50.421Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 [none]
-[debug] [2023-08-16T15:02:50.842Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 200
-[debug] [2023-08-16T15:02:50.842Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 {"projectId":"party-game-34121","projectNumber":"380048439162","displayName":"party-game","name":"projects/party-game-34121","resources":{"hostingSite":"party-game-34121"},"state":"ACTIVE","etag":"1_971eb8fd-c0c0-43c2-b3b8-48794f432e08"}
-[info] i  hosting[party-game-34121]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
-[info] +  hosting[party-game-34121]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
-[debug] [2023-08-16T15:02:50.882Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-08-16T15:02:50.883Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-08-16T15:02:50.883Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Arix\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
-[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-08-16T15:02:51.145Z] Web / API server started at 127.0.0.1:8081
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:8081\n"}}
-[debug] [2023-08-16T15:02:51.146Z] Web / API server started at ::1:8081
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:8081\n"}}
-[info] i  functions: Watching "D:\WebWorkspace\party-game\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"D:\\WebWorkspace\\party-game\\functions\" for Cloud Functions..."}}
-[debug] [2023-08-16T15:02:51.166Z] Validating nodejs source
-[debug] [2023-08-16T15:02:54.408Z] > [functions] package.json contents: {
-  "name": "functions",
-  "scripts": {
-    "lint": "eslint --ext .js,.ts .",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "18"
-  },
-  "main": "lib/index.js",
-  "dependencies": {
-    "firebase-admin": "^11.8.0",
-    "firebase-functions": "^4.3.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
-    "eslint": "^8.9.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-import": "^2.25.4",
-    "firebase-functions-test": "^3.1.0",
-    "typescript": "^4.9.0"
-  },
-  "private": true
-}
-[error] !!  functions: Failed to load function definition from source: FirebaseError: There was an error reading functions\package.json:
-
- functions\lib\index.js does not exist, can't deploy Cloud Functions {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading functions\\package.json:\n\n functions\\lib\\index.js does not exist, can't deploy Cloud Functions"}}
-[info] 
-┌─────────────────────────────────────────────────────────────┐
-│ ✔  All emulators ready! It is now safe to connect your app. │
-│ i  View Emulator UI at http://127.0.0.1:8081/               │
-└─────────────────────────────────────────────────────────────┘
-
-┌────────────────┬────────────────┬─────────────────────────────────┐
-│ Emulator       │ Host:Port      │ View in Emulator UI             │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:8081/auth      │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:8081/functions │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:8081/firestore │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Hosting        │ 127.0.0.1:5000 │ n/a                             │
-└────────────────┴────────────────┴─────────────────────────────────┘
-  Emulator Hub running at 127.0.0.1:4400
-  Other reserved ports: 4500, 9150
-
-Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
- 
-[debug] [2023-08-16T15:04:09.992Z] Aug 16, 2023 10:04:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 16, 2023 10:04:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
-[debug] [2023-08-16T15:22:51.137Z] Aug 16, 2023 10:22:51 PM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException
-WARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 16, 2023 10:22:51 PM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException\r\nWARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.\r\njava.net.SocketException: Connection reset\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)\r\n\tat io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)\r\n\tat io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)\r\n\tat io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)\r\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)\r\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\r\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\r\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\r\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\r\n\tat java.base/java.lang.Thread.run(Thread.java:833)\r\n\r\n"}}
-[debug] [2023-08-17T14:53:24.964Z] ----------------------------------------------------------------------
-[debug] [2023-08-17T14:53:24.970Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arix\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2023-08-17T14:53:24.971Z] CLI Version:   12.4.5
-[debug] [2023-08-17T14:53:24.972Z] Platform:      win32
-[debug] [2023-08-17T14:53:24.973Z] Node Version:  v18.16.0
-[debug] [2023-08-17T14:53:24.990Z] Time:          Thu Aug 17 2023 21:53:24 GMT+0700 (Indochina Time)
-[debug] [2023-08-17T14:53:24.991Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2023-08-17T14:53:25.213Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-08-17T14:53:25.215Z] > authorizing via FIREBASE_TOKEN environment variable
-[warn] !  Authenticating with `FIREBASE_TOKEN` is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
-[debug] [2023-08-17T14:53:25.469Z] openjdk version "17.0.2" 2022-01-18
-
-[debug] [2023-08-17T14:53:25.471Z] OpenJDK Runtime Environment (build 17.0.2+8-86)
-OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
-
-[debug] [2023-08-17T14:53:25.493Z] Parsed Java major version: 17
-[info] i  emulators: Starting emulators: auth, functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting"}}
-[debug] [2023-08-17T14:53:25.538Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-17T14:53:25.538Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-17T14:53:25.539Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-17T14:53:25.539Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-17T14:53:25.539Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-17T14:53:25.540Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project party-game-34121. This may result in unexpected behavior. 
-[debug] [2023-08-17T14:53:25.565Z] [hub] writing locator at C:\Users\Arix\AppData\Local\Temp\hub-party-game-34121.json
-[debug] [2023-08-17T14:53:25.591Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-17T14:53:25.592Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-17T14:53:25.592Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
-[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, pubsub, storage\u001b[22m"}}
-[debug] [2023-08-17T14:53:25.600Z] defaultcredentials: writing to file C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json
-[debug] [2023-08-17T14:53:25.604Z] Setting GAC to C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Arix\\AppData\\Roaming\\firebase\\dongho120123_gmail_com_application_default_credentials.json"}}
-[debug] [2023-08-17T14:53:25.608Z] > refreshing access token with scopes: []
-[debug] [2023-08-17T14:53:25.611Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-08-17T14:53:25.612Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-08-17T14:53:26.371Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-08-17T14:53:26.371Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-08-17T14:53:26.372Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig [none]
-[debug] [2023-08-17T14:53:26.903Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig 200
-[debug] [2023-08-17T14:53:26.904Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig {"projectId":"party-game-34121","storageBucket":"party-game-34121.appspot.com"}
-[debug] [2023-08-17T14:53:26.936Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-08-17T14:53:26.937Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2023-08-17T14:53:26.937Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\Arix\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","party-game-34121","--rules","D:\\WebWorkspace\\party-game\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"party-game-34121\",\"--rules\",\"D:\\\\WebWorkspace\\\\party-game\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
-[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2023-08-17T14:53:29.382Z] Aug 17, 2023 9:53:29 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
-INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 9:53:29 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
-[debug] [2023-08-17T14:53:29.470Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
-[debug] [2023-08-17T14:53:29.471Z] 127.0.0.1:8080
-If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
-
-   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
-
-Dev App Server is now running.
-
- {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\r\n"}}
-[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2023-08-17T14:53:38.367Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 
-[debug] [2023-08-17T14:53:39.037Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 200
-[debug] [2023-08-17T14:53:39.038Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites {"sites":[{"name":"projects/party-game-34121/sites/party-game-34121","defaultUrl":"https://party-game-34121.web.app","appId":"1:380048439162:web:516482698fb540b40808c3","type":"DEFAULT_SITE"}]}
-[debug] [2023-08-17T14:53:39.038Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config [none]
-[debug] [2023-08-17T14:53:40.150Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config 200
-[debug] [2023-08-17T14:53:40.150Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config {"projectId":"party-game-34121","appId":"1:380048439162:web:516482698fb540b40808c3","storageBucket":"party-game-34121.appspot.com","apiKey":"AIzaSyDWUrY1_dvBYW6HqUc9QncX11WwXvzDbIo","authDomain":"party-game-34121.firebaseapp.com","messagingSenderId":"380048439162","measurementId":"G-7CVSE9EHVB"}
-[debug] [2023-08-17T14:53:40.155Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 [none]
-[debug] [2023-08-17T14:53:40.559Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 200
-[debug] [2023-08-17T14:53:40.559Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 {"projectId":"party-game-34121","projectNumber":"380048439162","displayName":"party-game","name":"projects/party-game-34121","resources":{"hostingSite":"party-game-34121"},"state":"ACTIVE","etag":"1_971eb8fd-c0c0-43c2-b3b8-48794f432e08"}
-[info] i  hosting[party-game-34121]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
-[info] +  hosting[party-game-34121]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
-[debug] [2023-08-17T14:53:40.601Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-08-17T14:53:40.601Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-08-17T14:53:40.601Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Arix\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
-[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-08-17T14:53:40.788Z] Web / API server started at 127.0.0.1:8081
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:8081\n"}}
-[debug] [2023-08-17T14:53:40.789Z] Web / API server started at ::1:8081
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:8081\n"}}
-[info] i  functions: Watching "D:\WebWorkspace\party-game\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"D:\\WebWorkspace\\party-game\\functions\" for Cloud Functions..."}}
-[debug] [2023-08-17T14:53:40.890Z] Validating nodejs source
-[debug] [2023-08-17T14:53:43.780Z] > [functions] package.json contents: {
-  "name": "functions",
-  "scripts": {
-    "lint": "eslint --ext .js,.ts .",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "18"
-  },
-  "main": "lib/index.js",
-  "dependencies": {
-    "firebase-admin": "^11.8.0",
-    "firebase-functions": "^4.3.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
-    "eslint": "^8.9.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-import": "^2.25.4",
-    "firebase-functions-test": "^3.1.0",
-    "typescript": "^4.9.0"
-  },
-  "private": true
-}
-[error] !!  functions: Failed to load function definition from source: FirebaseError: There was an error reading functions\package.json:
-
- functions\lib\index.js does not exist, can't deploy Cloud Functions {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading functions\\package.json:\n\n functions\\lib\\index.js does not exist, can't deploy Cloud Functions"}}
-[info] 
-┌─────────────────────────────────────────────────────────────┐
-│ ✔  All emulators ready! It is now safe to connect your app. │
-│ i  View Emulator UI at http://127.0.0.1:8081/               │
-└─────────────────────────────────────────────────────────────┘
-
-┌────────────────┬────────────────┬─────────────────────────────────┐
-│ Emulator       │ Host:Port      │ View in Emulator UI             │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:8081/auth      │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:8081/functions │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:8081/firestore │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Hosting        │ 127.0.0.1:5000 │ n/a                             │
-└────────────────┴────────────────┴─────────────────────────────────┘
-  Emulator Hub running at 127.0.0.1:4400
-  Other reserved ports: 4500, 9150
-
-Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
- 
-[debug] [2023-08-17T16:21:54.348Z] Aug 17, 2023 11:21:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:21:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:21:56.022Z] Aug 17, 2023 11:21:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:21:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:22:56.380Z] Aug 17, 2023 11:22:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:22:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:23:56.723Z] Aug 17, 2023 11:23:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:23:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:24:58.672Z] Aug 17, 2023 11:24:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:24:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:25:59.030Z] Aug 17, 2023 11:25:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:25:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:26:59.087Z] Aug 17, 2023 11:26:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:26:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:27:59.429Z] Aug 17, 2023 11:27:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:27:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:28:59.770Z] Aug 17, 2023 11:28:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:28:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:30:00.134Z] Aug 17, 2023 11:30:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:30:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:31:00.161Z] Aug 17, 2023 11:31:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:31:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:32:00.512Z] Aug 17, 2023 11:32:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:32:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:33:00.871Z] Aug 17, 2023 11:33:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:33:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:34:00.906Z] Aug 17, 2023 11:34:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:34:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:35:01.263Z] Aug 17, 2023 11:35:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:35:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:36:01.620Z] Aug 17, 2023 11:36:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:36:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:37:01.661Z] Aug 17, 2023 11:37:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:37:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:38:02.005Z] Aug 17, 2023 11:38:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:38:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:39:02.045Z] Aug 17, 2023 11:39:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:39:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:40:02.387Z] Aug 17, 2023 11:40:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:40:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:41:02.413Z] Aug 17, 2023 11:41:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:41:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:42:02.748Z] Aug 17, 2023 11:42:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:42:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:43:03.102Z] Aug 17, 2023 11:43:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:43:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:44:03.130Z] Aug 17, 2023 11:44:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:44:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:45:03.459Z] Aug 17, 2023 11:45:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:45:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:46:03.824Z] Aug 17, 2023 11:46:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:46:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:47:04.173Z] Aug 17, 2023 11:47:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:47:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:48:04.506Z] Aug 17, 2023 11:48:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:48:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:49:04.858Z] Aug 17, 2023 11:49:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:49:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:50:05.193Z] Aug 17, 2023 11:50:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:50:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:51:05.528Z] Aug 17, 2023 11:51:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:51:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:52:05.572Z] Aug 17, 2023 11:52:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:52:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:53:05.942Z] Aug 17, 2023 11:53:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:53:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:54:06.279Z] Aug 17, 2023 11:54:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:54:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:55:06.631Z] Aug 17, 2023 11:55:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:55:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:56:06.988Z] Aug 17, 2023 11:56:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:56:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:57:07.323Z] Aug 17, 2023 11:57:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:57:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:58:07.350Z] Aug 17, 2023 11:58:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:58:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T16:59:07.718Z] Aug 17, 2023 11:59:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 17, 2023 11:59:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:00:07.754Z] Aug 18, 2023 12:00:07 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:00:07 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:01:08.096Z] Aug 18, 2023 12:01:08 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:01:08 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:02:08.447Z] Aug 18, 2023 12:02:08 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:02:08 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:03:08.826Z] Aug 18, 2023 12:03:08 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:03:08 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:04:09.174Z] Aug 18, 2023 12:04:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:04:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:05:09.502Z] Aug 18, 2023 12:05:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:05:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:06:09.544Z] Aug 18, 2023 12:06:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:06:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:07:09.881Z] Aug 18, 2023 12:07:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:07:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:08:09.916Z] Aug 18, 2023 12:08:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:08:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:09:10.246Z] Aug 18, 2023 12:09:10 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:09:10 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:10:10.282Z] Aug 18, 2023 12:10:10 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:10:10 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:11:10.618Z] Aug 18, 2023 12:11:10 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:11:10 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:12:10.948Z] Aug 18, 2023 12:12:10 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:12:10 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:13:11.277Z] Aug 18, 2023 12:13:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:13:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:14:11.316Z] Aug 18, 2023 12:14:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:14:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:15:11.662Z] Aug 18, 2023 12:15:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:15:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:16:11.998Z] Aug 18, 2023 12:16:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:16:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:17:12.035Z] Aug 18, 2023 12:17:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:17:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:18:12.363Z] Aug 18, 2023 12:18:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:18:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:19:12.394Z] Aug 18, 2023 12:19:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:19:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:20:12.737Z] Aug 18, 2023 12:20:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:20:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:21:13.067Z] Aug 18, 2023 12:21:13 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:21:13 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:21:58.268Z] Aug 18, 2023 12:21:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:21:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:22:58.617Z] Aug 18, 2023 12:22:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:22:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:23:58.953Z] Aug 18, 2023 12:23:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:23:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:24:58.985Z] Aug 18, 2023 12:24:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:24:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:25:59.312Z] Aug 18, 2023 12:25:59 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:25:59 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:26:59.333Z] Aug 18, 2023 12:26:59 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:26:59 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:27:45.556Z] Aug 18, 2023 12:27:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:27:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:28:45.574Z] Aug 18, 2023 12:28:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:28:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:29:45.921Z] Aug 18, 2023 12:29:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:29:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:30:46.254Z] Aug 18, 2023 12:30:46 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:30:46 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:31:46.590Z] Aug 18, 2023 12:31:46 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:31:46 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:32:46.927Z] Aug 18, 2023 12:32:46 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:32:46 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:33:47.391Z] Aug 18, 2023 12:33:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:33:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:34:47.803Z] Aug 18, 2023 12:34:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:34:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:35:48.245Z] Aug 18, 2023 12:35:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:35:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:36:48.637Z] Aug 18, 2023 12:36:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:36:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:37:48.997Z] Aug 18, 2023 12:37:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:37:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:38:49.345Z] Aug 18, 2023 12:38:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:38:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:39:49.692Z] Aug 18, 2023 12:39:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:39:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:40:50.046Z] Aug 18, 2023 12:40:50 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:40:50 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-17T17:41:50.385Z] Aug 18, 2023 12:41:50 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 18, 2023 12:41:50 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
-[debug] [2023-08-19T07:06:30.102Z] ----------------------------------------------------------------------
-[debug] [2023-08-19T07:06:30.104Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arix\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2023-08-19T07:06:30.105Z] CLI Version:   12.4.5
-[debug] [2023-08-19T07:06:30.105Z] Platform:      win32
-[debug] [2023-08-19T07:06:30.105Z] Node Version:  v18.16.0
-[debug] [2023-08-19T07:06:30.114Z] Time:          Sat Aug 19 2023 14:06:30 GMT+0700 (Indochina Time)
-[debug] [2023-08-19T07:06:30.114Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2023-08-19T07:06:30.118Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2023-08-19T07:06:30.260Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-08-19T07:06:30.260Z] > authorizing via FIREBASE_TOKEN environment variable
-[warn] !  Authenticating with `FIREBASE_TOKEN` is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
-[debug] [2023-08-19T07:06:30.383Z] openjdk version "17.0.2" 2022-01-18
-
-[debug] [2023-08-19T07:06:30.384Z] OpenJDK Runtime Environment (build 17.0.2+8-86)
-OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
-
-[debug] [2023-08-19T07:06:30.397Z] Parsed Java major version: 17
-[info] i  emulators: Starting emulators: auth, functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting"}}
-[debug] [2023-08-19T07:06:30.413Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-19T07:06:30.413Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-19T07:06:30.413Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-19T07:06:30.413Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-19T07:06:30.413Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-19T07:06:30.413Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project party-game-34121. This may result in unexpected behavior. 
-[debug] [2023-08-19T07:06:30.426Z] [hub] writing locator at C:\Users\Arix\AppData\Local\Temp\hub-party-game-34121.json
-[debug] [2023-08-19T07:06:30.444Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-19T07:06:30.445Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-08-19T07:06:30.445Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8081},{"address":"::1","family":"IPv6","port":8081}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
-[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, pubsub, storage\u001b[22m"}}
-[debug] [2023-08-19T07:06:30.448Z] defaultcredentials: writing to file C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json
-[debug] [2023-08-19T07:06:30.451Z] Setting GAC to C:\Users\Arix\AppData\Roaming\firebase\dongho120123_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Arix\\AppData\\Roaming\\firebase\\dongho120123_gmail_com_application_default_credentials.json"}}
-[debug] [2023-08-19T07:06:30.452Z] > refreshing access token with scopes: []
-[debug] [2023-08-19T07:06:30.453Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-08-19T07:06:30.453Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-08-19T07:06:30.671Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-08-19T07:06:30.671Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-08-19T07:06:30.672Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig [none]
-[debug] [2023-08-19T07:06:30.774Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2023-08-19T07:06:30.775Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[debug] [2023-08-19T07:06:31.009Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig 200
-[debug] [2023-08-19T07:06:31.010Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/adminSdkConfig {"projectId":"party-game-34121","storageBucket":"party-game-34121.appspot.com"}
-[debug] [2023-08-19T07:06:31.042Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-08-19T07:06:31.042Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2023-08-19T07:06:31.042Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\Arix\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","party-game-34121","--rules","D:\\WebWorkspace\\party-game\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"party-game-34121\",\"--rules\",\"D:\\\\WebWorkspace\\\\party-game\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
-[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2023-08-19T07:06:32.682Z] Aug 19, 2023 2:06:32 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
-INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 19, 2023 2:06:32 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
-[debug] [2023-08-19T07:06:32.746Z] API endpoint: http://127.0.0.1:8080
-If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
-
-   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
-
-Dev App Server is now running.
-
- {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\r\n"}}
-[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2023-08-19T07:06:39.612Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 
-[debug] [2023-08-19T07:06:40.210Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites 200
-[debug] [2023-08-19T07:06:40.210Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/party-game-34121/sites {"sites":[{"name":"projects/party-game-34121/sites/party-game-34121","defaultUrl":"https://party-game-34121.web.app","appId":"1:380048439162:web:516482698fb540b40808c3","type":"DEFAULT_SITE"}]}
-[debug] [2023-08-19T07:06:40.211Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config [none]
-[debug] [2023-08-19T07:06:41.313Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config 200
-[debug] [2023-08-19T07:06:41.313Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121/webApps/1:380048439162:web:516482698fb540b40808c3/config {"projectId":"party-game-34121","appId":"1:380048439162:web:516482698fb540b40808c3","storageBucket":"party-game-34121.appspot.com","apiKey":"AIzaSyDWUrY1_dvBYW6HqUc9QncX11WwXvzDbIo","authDomain":"party-game-34121.firebaseapp.com","messagingSenderId":"380048439162","measurementId":"G-7CVSE9EHVB"}
-[debug] [2023-08-19T07:06:41.346Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 [none]
-[debug] [2023-08-19T07:06:41.734Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 200
-[debug] [2023-08-19T07:06:41.734Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/party-game-34121 {"projectId":"party-game-34121","projectNumber":"380048439162","displayName":"party-game","name":"projects/party-game-34121","resources":{"hostingSite":"party-game-34121"},"state":"ACTIVE","etag":"1_971eb8fd-c0c0-43c2-b3b8-48794f432e08"}
-[info] i  hosting[party-game-34121]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
-[info] +  hosting[party-game-34121]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
-[debug] [2023-08-19T07:06:41.917Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-08-19T07:06:41.917Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-08-19T07:06:41.917Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Arix\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Arix\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
-[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-08-19T07:06:42.074Z] Web / API server started at 127.0.0.1:8081
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:8081\n"}}
-[debug] [2023-08-19T07:06:42.074Z] Web / API server started at ::1:8081
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:8081\n"}}
-[info] i  functions: Watching "D:\WebWorkspace\party-game\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"D:\\WebWorkspace\\party-game\\functions\" for Cloud Functions..."}}
-[debug] [2023-08-19T07:06:42.197Z] Validating nodejs source
-[debug] [2023-08-19T07:06:46.984Z] > [functions] package.json contents: {
+[debug] [2023-08-21T14:53:01.815Z] Validating nodejs source
+[debug] [2023-08-21T14:53:05.075Z] > [functions] package.json contents: {
   "name": "functions",
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
