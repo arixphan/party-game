@@ -48,17 +48,21 @@ const WheelComponent = ({
   let angleDelta = 0;
   let canvasContext: CanvasRenderingContext2D | null = null;
   let maxSpeed = Math.PI / segments.length;
-  const upTime = segments.length * upDuration;
-  const downTime = segments.length * downDuration;
+  const upTime = upDuration;
+  const downTime = downDuration;
   let spinStart = 0;
   let frames = 0;
-  const centerX = 300;
-  const centerY = 300;
+  const centerX = width / 2;
+  const centerY = height / 2;
   useEffect(() => {
     wheelInit();
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       window.scrollTo(0, 100);
     }, 0);
+    return () => {
+      timer && clearTimeout(timer);
+      timerHandle && clearInterval(timerHandle);
+    };
   }, [segments]);
   const wheelInit = () => {
     initCanvas();
@@ -176,7 +180,11 @@ const WheelComponent = ({
 
     if (value === "drink") {
       const image: any = document.getElementById("art");
-      ctx.drawImage(image, size / 2, -36, 64, 64);
+      try {
+        ctx?.drawImage(image, size / 2, -36, 64, 64);
+      } catch (err) {
+        console.log(err);
+      }
     }
 
     ctx.restore();
@@ -259,13 +267,14 @@ const WheelComponent = ({
     }
     ctx.clearRect(0, 0, 1000, 800);
   };
+
   return (
-    <div>
+    <div className="w-full flex justify-center">
       <canvas
         className="cursor-pointer"
         id="canvas"
-        width="600"
-        height="600"
+        width={width}
+        height={height}
         style={{
           pointerEvents: isFinished && isOnlyOnce ? "none" : "auto",
         }}
