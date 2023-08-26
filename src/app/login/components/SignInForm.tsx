@@ -190,7 +190,7 @@ export const SignInForm = ({ className = "" }: { className?: string }) => {
 
       <div className="text-center">
         <span className="text-xs text-gray-400 font-semibold">
-          Don't have account?
+          {"Don't have account?"}
         </span>{" "}
         <Link
           href={AppRoute.AUTH.REGISTER}

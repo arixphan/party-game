@@ -115,7 +115,7 @@ export function SpinnerWheel() {
       />
       {currentResult === "drink" && (
         <div className="w-full text-white font-bold text-4xl flex justify-center mb-4">
-          Let's drink! 🍻😄
+          {"Let's drink! 🍻😄"}
         </div>
       )}
       {currentResult === "no" && (
