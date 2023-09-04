@@ -54,16 +54,19 @@ const WheelComponent = ({
   let frames = 0;
   const centerX = width / 2;
   const centerY = height / 2;
+
   useEffect(() => {
     wheelInit();
     const timer = setTimeout(() => {
       window.scrollTo(0, 100);
     }, 0);
+    timerHandle = setInterval(onTimerTickSlow, timerDelay);
     return () => {
       timer && clearTimeout(timer);
       timerHandle && clearInterval(timerHandle);
     };
   }, [segments]);
+
   const wheelInit = () => {
     initCanvas();
     wheelDraw();
@@ -86,8 +89,11 @@ const WheelComponent = ({
 
   const spin = () => {
     isStarted = true;
-    // onRotate();
     onStart && onStart();
+    if (timerHandle) {
+      clearInterval(timerHandle);
+      timerHandle = 0;
+    }
     if (timerHandle === 0) {
       spinStart = new Date().getTime();
       // maxSpeed = Math.PI / (segments.length * 2 + Math.random());
@@ -96,6 +102,16 @@ const WheelComponent = ({
       timerHandle = setInterval(onTimerTick, timerDelay);
     }
   };
+
+  const onTimerTickSlow = () => {
+    frames++;
+    draw();
+    angleDelta = 0.001;
+
+    angleCurrent += angleDelta;
+    while (angleCurrent >= Math.PI * 2) angleCurrent -= Math.PI * 2;
+  };
+
   const onTimerTick = () => {
     frames++;
     draw();

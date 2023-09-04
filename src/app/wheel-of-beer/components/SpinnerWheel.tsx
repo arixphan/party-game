@@ -6,6 +6,7 @@ import { Button } from "@/app/shares/button/Button";
 import { useEffect, useState } from "react";
 import { ErrorMessage } from "@/app/shares/error/ErrorMessage";
 import { useWindowSize } from "@/hooks/useWindowSize";
+import { SoundOffIcon, SoundOnIcon } from "@/app/shares/icon/Icon";
 
 type DrinkOption = "drink" | "no";
 const DEFAULT_OPTIONS: Array<DrinkOption> = [
@@ -44,6 +45,7 @@ export function SpinnerWheel() {
     useState<Array<"drink" | "no">>(DEFAULT_OPTIONS);
   const [text, setText] = useState("");
   const [hasError, setHasError] = useState(false);
+  const [enableEffect, setEnableEffect] = useState(true);
 
   const [currentResult, setCurrentResult] = useState<DrinkOption | "">("");
   const windowSize = useWindowSize();
@@ -93,26 +95,54 @@ export function SpinnerWheel() {
   const windowWidth = windowSize.width || 600;
   const spinnerWidth = windowWidth >= 600 ? 600 : windowWidth;
 
+  const handleSoundOn = () => {
+    setEnableEffect(false);
+    const spinningSound: any = document.getElementById("spinning-sound");
+    spinningSound.muted = true;
+  };
+
+  const handleSoundOff = () => {
+    setEnableEffect(true);
+    const spinningSound: any = document.getElementById("spinning-sound");
+    spinningSound.muted = false;
+  };
+
   return (
     <div className="w-full mt-12 lg:w-3/6 sm:mb-0 lg:mb-12 flex flex-col justify-center items-center">
-      <WheelComponent
-        key={segments.join(", ") + size + " " + spinnerWidth}
-        segments={segments}
-        segColors={segColors}
-        onFinished={(winner) => onFinished(winner)}
-        onStart={onStart}
-        primaryColor="#6140B0"
-        primaryColoraround="white"
-        contrastColor="white"
-        buttonText="Drink"
-        isOnlyOnce={false}
-        size={size || 270}
-        upDuration={500}
-        downDuration={7000}
-        fontFamily={""}
-        height={spinnerWidth}
-        width={spinnerWidth}
-      />
+      <div className="relative" style={{ height: spinnerWidth }}>
+        <WheelComponent
+          key={segments.join(", ") + size + " " + spinnerWidth}
+          segments={segments}
+          segColors={segColors}
+          onFinished={(winner) => onFinished(winner)}
+          onStart={onStart}
+          primaryColor="#6140B0"
+          primaryColoraround="white"
+          contrastColor="white"
+          buttonText="Drink"
+          isOnlyOnce={false}
+          size={size || 270}
+          upDuration={500}
+          downDuration={7000}
+          fontFamily={""}
+          height={spinnerWidth}
+          width={spinnerWidth}
+        />
+        {enableEffect ? (
+          <SoundOnIcon
+            className="absolute h-6 w-6 ml-2 cursor-pointer"
+            style={{ bottom: "1.5rem" }}
+            onClick={handleSoundOn}
+          />
+        ) : (
+          <SoundOffIcon
+            className="absolute h-6 w-6 ml-2 cursor-pointer"
+            style={{ bottom: "1.5rem" }}
+            onClick={handleSoundOff}
+          />
+        )}
+      </div>
+
       {currentResult === "drink" && (
         <div className="w-full text-white font-bold text-4xl flex justify-center mb-4">
           {"Let's drink! 🍻😄"}
