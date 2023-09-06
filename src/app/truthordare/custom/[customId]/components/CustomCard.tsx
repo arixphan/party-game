@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, KeyboardEvent } from "react";
 import { DocumentData, orderBy } from "firebase/firestore";
 import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
@@ -209,6 +209,13 @@ export const CustomCard = ({ className }: GameCardProps) => {
     router.push(`${AppRoute.TRUTH_OR_DARE.PLAY}/${customId}`);
   };
 
+  const handleOnKeyDown = (event: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleCreateQuestion();
+    }
+  };
+
   return (
     <div
       className={`bg-white drop-shadow-2xl rounded-xl border-4 border-black p-6 flex flex-col gap-y-4 ${className}`}
@@ -277,6 +284,7 @@ export const CustomCard = ({ className }: GameCardProps) => {
             </Label>
             <div className="w-full bg-zinc-50 rounded-lg flex justify-between">
               <TextArea
+                onKeyDown={handleOnKeyDown}
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
                 maxLength={250}

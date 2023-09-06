@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useState } from "react";
+import { memo, useState, KeyboardEvent } from "react";
 import { DocumentData } from "firebase/firestore";
 
 import {
@@ -34,7 +34,7 @@ export const CustomLine = memo(function CustomLine({
   }
 
   return (
-    <div className="w-full min-h-[96px] bg-zinc-100 rounded-lg flex justify-between">
+    <div className="w-full min-h-[96px] bg-zinc-100 rounded-lg flex justify-between border-indigo-700 hover:border-2">
       <div className="flex-auto font-semibold break-words p-2 break-all">
         {item.content}
       </div>
@@ -68,10 +68,18 @@ const EditLine = memo(function EditLine({ item, onDone }: EditLineProps) {
     onDone({ ...item, content: question });
   };
 
+  const handleOnKeyDown = (event: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleOnDone();
+    }
+  };
+
   return (
     <div className="w-full bg-zinc-50 rounded-lg flex justify-between">
       <TextArea
         value={question}
+        onKeyDown={handleOnKeyDown}
         onChange={(e) => setQuestion(e.target.value)}
         maxLength={250}
         rows={4}
